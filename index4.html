@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+	<title>2005 주식시장 개장</title>
+    <div>
+        <img src="에이블 로고.png" alt="에이블">
+    </div>
+	<img src="ablecr.png" id="moving-image">
+      
+      <style>
+        
+        body {
+  background-image: url("inve.png"); /* 이미지 파일 경로 */
+  background-size: cover; /* 배경 이미지 크기 설정 */
+}
+        img {
+    float: left;
+  }
+
+  #moving-image {
+   position: absolute;
+   top: 50%;
+   left: 0;
+   animation: move-image 10s linear infinite;
+}
+
+@keyframes move-image {
+   0% {
+      transform: translateX(0);
+   }
+   50% {
+      transform: translateX(80%);
+   }
+   100% {
+      transform: translateX(0);
+   }
+}
+
+  .container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+
+		.timer {
+			font-size: 5rem;
+			margin-bottom: 1rem;
+		}
+        
+
+		.btn {
+			padding: 1rem;
+			font-size: 1.5rem;
+			border-radius: 5px;
+			background-color: #007bff;
+			color: #fff;
+			cursor: pointer;
+			transition: background-color 0.2s ease-in-out;
+		}
+
+		.btn:hover {
+			background-color: #0062cc;
+		}
+        h1 {
+        color : white;
+        
+        
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* 테두리 스타일 */
+        padding: 10px; /* 글자와 테두리 간격 */
+      }
+      label{
+        color : white;
+        
+        font-size: 2em;
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* 테두리 스타일 */
+        padding: 10px; /* 글자와 테두리 간격 */
+      }
+      div {
+        color : red;
+        
+        
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* 테두리 스타일 */
+        padding: 10px; /* 글자와 테두리 간격 */
+      }
+      input{
+        width : 6rem;
+        height : 3rem;
+        font-size : 2rem;
+        text-align: center;
+      }
+
+      .next-page-btn {
+  background-color: #000000; /* 배경색 */
+  color: #ffffff; /* 글자색 */
+  border: none; /* 테두리 없애기 */
+  border-radius: 5px; /* 둥근 테두리 만들기 */
+  padding: 10px 20px; /* 버튼 내부 여백 */
+  font-size: 30px; /* 폰트 크기 */
+  cursor: pointer; /* 마우스 포인터 모양 변경 */
+  transition: all 0.3s ease; /* 호버 효과를 위한 애니메이션 속성 */
+  text-decoration: none;
+}
+
+.next-page-btn:hover {
+  background-color: #0069d9; /* 호버시 배경색 변경 */
+  color: #fff; /* 호버시 글자색 변경 */
+} 
+.button-container {
+      text-align: right;
+      margin-top: 20px;
+    }
+  
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+		<h1>투자마감시간</h1>
+		<div class="timer">00:00:00</div>
+		<label for="time" ;>설정시간 :</label>
+		<input type="number" id="time" min="1" value="1">
+		<button class="btn" id="start">Start</button>
+		<button class="btn" id="stop">Stop</button>
+		<button class="btn" id="reset">Reset</button>
+	</div>
+    <div class="button-container">
+        <a href="index5.html" class="next-page-btn">다음</a>
+      </div>
+
+	<script>
+
+window.onload = function() {
+   let movingImage = document.getElementById("moving-image");
+   movingImage.style.animationPlayState = "running";
+};
+
+
+		let seconds = 0;
+		let timerId;
+		const timerDisplay = document.querySelector('.timer');
+		const startBtn = document.getElementById('start');
+		const stopBtn = document.getElementById('stop');
+		const resetBtn = document.getElementById('reset');
+		const timeInput = document.getElementById('time');
+
+		function formatTime(seconds) {
+			const hours = Math.floor(seconds / 3600);
+			const minutes = Math.floor((seconds % 3600) / 60);
+			const secondsLeft = seconds % 60;
+			return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secondsLeft.toString().padStart(2, '0')}`;
+		}
+
+		function startTimer() {
+			if (!timerId) {
+				seconds = Number(timeInput.value) * 60;
+				timerDisplay.textContent = formatTime(seconds);
+				timerId = setInterval(() => {
+					seconds--;
+					timerDisplay.textContent = formatTime(seconds);
+					if (seconds === 0) {
+						stopTimer();
+					}
+				}, 1000);
+			}
+		}
+
+		function stopTimer() {
+			clearInterval(timerId);
+  timerId = null;
+
+  const bgImage1 = 'red.png'; // 새로운 배경 이미지 1
+  const bgImage2 = 'black.png'; // 새로운 배경 이미지 2
+  const bgImages = [bgImage1, bgImage2]; // 배열에 저장
+  const oldBgImage = 'inve.png'; // 기존 배경 이미지
+
+  let i = 0; // 인덱스 변수
+  const intervalId = setInterval(() => {
+    document.body.style.backgroundImage = `url(${bgImages[i]})`; // 현재 인덱스에 해당하는 이미지로 변경
+    i = (i + 1) % bgImages.length; // 다음 인덱스로 변경
+
+    // 5초가 지나면 원래 이미지로 변경
+    setTimeout(() => {
+      document.body.style.backgroundImage = `url(${oldBgImage})`;
+      clearInterval(intervalId); // interval 중지
+    }, 5000);
+  }, 500);
+		}
+
+		function resetTimer() {
+			stopTimer();
+			seconds = Number(timeInput.value) * 60;
+			timerDisplay.textContent = formatTime(seconds);
+		}
+
+		startBtn.addEventListener('click', startTimer);
+		stopBtn.addEventListener('click', stopTimer);
+		resetBtn.addEventListener('click', resetTimer);
+	</script>
+    
+    
+</body>
+</html>

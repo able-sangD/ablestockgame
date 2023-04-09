@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2010 투자 결과</title>
+        <div>
+            <img src="에이블 로고.png" alt="에이블">
+        </div>
+        <style>
+            body {
+  background-image: url("2015.png"); /* 이미지 파일 경로 */
+  background-size: cover; /* 배경 이미지 크기 설정 */
+}
+        img {
+    float: left;
+  }
+  h1 {
+            color : white;
+            text-align: center;
+            font-size: 5em;
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* 테두리 스타일 */
+            padding: 10px; /* 글자와 테두리 간격 */
+          }
+
+
+          #button-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 50px;
+      }
+
+      button {
+        text-align: center;
+        width : 150px;
+        margin: 0 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #008cba;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+      }
+
+      #text-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+      }
+
+      #text {
+        font-size: 150px;
+        font-weight: bold;
+      }
+
+      .next-page-btn {
+  background-color: #000000; /* 배경색 */
+  color: #ffffff; /* 글자색 */
+  border: none; /* 테두리 없애기 */
+  border-radius: 5px; /* 둥근 테두리 만들기 */
+  padding: 10px 20px; /* 버튼 내부 여백 */
+  font-size: 30px; /* 폰트 크기 */
+  cursor: pointer; /* 마우스 포인터 모양 변경 */
+  transition: all 0.3s ease; /* 호버 효과를 위한 애니메이션 속성 */
+  text-decoration: none;
+}
+
+.next-page-btn:hover {
+  background-color: #0069d9; /* 호버시 배경색 변경 */
+  color: #fff; /* 호버시 글자색 변경 */
+} 
+.button-container {
+      text-align: right;
+      margin-top: 20px;
+    }
+        </style>
+    
+    </head>
+
+
+
+    <body>
+        <h1>최종 투자 결과확인</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div id="button-container">
+            <button id="button-a">A기업</button>
+            <button id="button-b">B기업</button>
+            <button id="button-c">C기업</button>
+            <button id="button-d">D기업</button>
+            <button id="button-e">E기업</button>
+            <button id="button-f">F기업</button>
+            <button id="button-g">G기업</button>
+            <button id="button-h">H기업</button>
+            <button id="button-i">I기업</button>
+            <button id="button-j">J기업</button>
+            <button id="button-k">K기업</button>
+            <button id="button-l">L기업</button>
+          </div>
+      
+          <div id="text-container">
+            <div id="text"></div>
+          </div>
+          <div class="button-container" >
+            <a href="index19.html" class="next-page-btn">다음</a>
+          </div>
+      
+          <script>
+            const buttonA = document.getElementById("button-a");
+            const buttonB = document.getElementById("button-b");
+            const buttonC = document.getElementById("button-c");
+            const buttonD = document.getElementById("button-d");
+            const buttonE = document.getElementById("button-e");
+            const buttonF = document.getElementById("button-f");
+            const buttonG = document.getElementById("button-g");
+            const buttonH = document.getElementById("button-h");
+            const buttonI = document.getElementById("button-i");
+            const buttonJ = document.getElementById("button-j");
+            const buttonK = document.getElementById("button-k");
+            const buttonL = document.getElementById("button-l");
+
+            const text = document.getElementById("text");
+      
+            buttonA.addEventListener("click", function () {
+              if (text.innerHTML !== "A기업") {
+                text.style.color = "red";
+                text.innerHTML = "2%";
+                text.style.opacity = 0;
+      let opacity = 0;
+      let intervalID = setInterval(function() {
+        if (opacity < 1) {
+          opacity += 0.1;
+          text.style.opacity = opacity;
+        } else {
+          clearInterval(intervalID);
+        }
+      }, 500);
+              } else {
+                text.innerHTML = "";
+              }
+            });
+      
+            buttonB.addEventListener("click", function () {
+              if (text.innerHTML !== "B기업") {
+                text.style.color = "red";
+                text.innerHTML = "87%";
+                text.style.opacity = 0;
+      let opacity = 0;
+      let intervalID = setInterval(function() {
+        if (opacity < 1) {
+          opacity += 0.1;
+          text.style.opacity = opacity;
+        } else {
+          clearInterval(intervalID);
+        }
+      }, 500);
+              } else {
+                text.innerHTML = "";
+              }
+            });
+      
+            buttonC.addEventListener("click", function () {
+              if (text.innerHTML !== "C기업") {
+                text.style.color = "red";
+                text.innerHTML = "54%";
+                text.style.opacity = 0;
+      let opacity = 0;
+      let intervalID = setInterval(function() {
+        if (opacity < 1) {
+          opacity += 0.1;
+          text.style.opacity = opacity;
+        } else {
+          clearInterval(intervalID);
+        }
+      }, 500);
+              } else {
+                text.innerHTML = "";
+              }
+            });
+
+            buttonD.addEventListener("click", function () {
+              if (text.innerHTML !== "D기업") {
+                text.style.color = "red";
+                text.innerHTML = "96%";
+                text.style.opacity = 0;
+      let opacity = 0;
+      let intervalID = setInterval(function() {
+        if (opacity < 1) {
+          opacity += 0.1;
+          text.style.opacity = opacity;
+        } else {
+          clearInterval(intervalID);
+        }
+      }, 500);
+              } else {
+                text.innerHTML = "";
+              }
+            });
+
+            buttonE.addEventListener("click", function () {
+              if (text.innerHTML !== "E기업") {
+                text.style.color = "red";
+                text.innerHTML = "51%";
+                text.style.opacity = 0;
+      let opacity = 0;
+      let intervalID = setInterval(function() {
+        if (opacity < 1) {
+          opacity += 0.1;
+          text.style.opacity = opacity;
+        } else {
+          clearInterval(intervalID);
+        }
+      }, 500);
+              } else {
+                text.innerHTML = "";
+              }
+            });
+
+            buttonF.addEventListener("click", function () {
+              if (text.innerHTML !== "F기업") {
+                text.style.color = "red";
+                text.innerHTML = "23%";
+                text.style.opacity = 0;
+      let opacity = 0;
+      let intervalID = setInterval(function() {
+        if (opacity < 1) {
+          opacity += 0.1;
+          text.style.opacity = opacity;
+        } else {
+          clearInterval(intervalID);
+        }
+      }, 500);
+              } else {
+                text.innerHTML = "";
+              }
+            });
+
+            buttonG.addEventListener("click", function () {
+              if (text.innerHTML !== "G기업") {
+                text.style.color = "red";
+                text.innerHTML = "47%";
+                text.style.opacity = 0;
+      let opacity = 0;
+      let intervalID = setInterval(function() {
+        if (opacity < 1) {
+          opacity += 0.1;
+          text.style.opacity = opacity;
+        } else {
+          clearInterval(intervalID);
+        }
+      }, 500);
+              } else {
+                text.innerHTML = "";
+              }
+            });
+
+            buttonH.addEventListener("click", function () {
+              if (text.innerHTML !== "H기업") {
+                text.style.color = "red";
+                text.innerHTML = "1152%";
+                text.style.opacity = 0;
+      let opacity = 0;
+      let intervalID = setInterval(function() {
+        if (opacity < 1) {
+          opacity += 0.1;
+          text.style.opacity = opacity;
+        } else {
+          clearInterval(intervalID);
+        }
+      }, 800);
+              } else {
+                text.innerHTML = "";
+              }
+            });
+
+            buttonI.addEventListener("click", function () {
+              if (text.innerHTML !== "I기업") {
+                text.style.color = "red";
+                text.innerHTML = "292%";
+                text.style.opacity = 0;
+      let opacity = 0;
+      let intervalID = setInterval(function() {
+        if (opacity < 1) {
+          opacity += 0.1;
+          text.style.opacity = opacity;
+        } else {
+          clearInterval(intervalID);
+        }
+      }, 500);
+              } else {
+                text.innerHTML = "";
+              }
+            });
+
+            buttonJ.addEventListener("click", function () {
+              if (text.innerHTML !== "J기업") {
+                text.style.color = "red";
+                text.innerHTML = "42%";
+                text.style.opacity = 0;
+      let opacity = 0;
+      let intervalID = setInterval(function() {
+        if (opacity < 1) {
+          opacity += 0.1;
+          text.style.opacity = opacity;
+        } else {
+          clearInterval(intervalID);
+        }
+      }, 500);
+              } else {
+                text.innerHTML = "";
+              }
+            });
+
+            buttonK.addEventListener("click", function () {
+              if (text.innerHTML !== "K기업") {
+                text.style.color = "red";
+                text.innerHTML = "46%";
+                text.style.opacity = 0;
+      let opacity = 0;
+      let intervalID = setInterval(function() {
+        if (opacity < 1) {
+          opacity += 0.1;
+          text.style.opacity = opacity;
+        } else {
+          clearInterval(intervalID);
+        }
+      }, 500);
+              } else {
+                text.innerHTML = "";
+              }
+            });
+
+            buttonL.addEventListener("click", function () {
+              if (text.innerHTML !== "L기업") {
+                text.style.color = "red";
+                text.innerHTML = "101%";
+                text.style.opacity = 0;
+      let opacity = 0;
+      let intervalID = setInterval(function() {
+        if (opacity < 1) {
+          opacity += 0.1;
+          text.style.opacity = opacity;
+        } else {
+          clearInterval(intervalID);
+        }
+      }, 500);
+              } else {
+                text.innerHTML = "";
+              }
+            });
+          </script>
+    </body>
+</html>

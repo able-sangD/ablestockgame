@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2010 투자</title>
+        <div>
+            <img src="에이블 로고.png" alt="에이블">
+        </div>
+        <style>
+            body {
+  background-image: url("2010.png"); /* 이미지 파일 경로 */
+  background-size: cover; /* 배경 이미지 크기 설정 */
+}
+        img {
+    float: left;
+  }
+
+  h1 {
+            color : white;
+            text-align: center;
+            font-size: 5em;
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* 테두리 스타일 */
+            padding: 10px; /* 글자와 테두리 간격 */
+          }
+  input[type="text"] {
+    text-align: center;
+   
+  }   
+  label {
+			display: block; /* 라벨 엘리먼트가 한 줄을 차지하도록 설정 */
+			margin-bottom: 5px; /* 라벨과 텍스트박스 사이의 간격 조정 */
+			font-size: 14px; /* 라벨의 폰트 크기 */
+			font-weight: bold; /* 라벨의 폰트 두께 */
+            text-align : center; 
+            display: inline-block; 
+            width: 60px; color : white; 
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+		}
+		input[type="text"] {
+			width: 120px; /* 텍스트박스의 가로 크기 */
+			height: 30px; /* 텍스트박스의 세로 크기 */
+			padding: 5px; /* 텍스트박스의 안쪽 여백 */
+			font-size: 15px; /* 텍스트박스의 폰트 크기 */
+			border: 1px solid #ccc; /* 텍스트박스의 테두리 스타일 */
+			border-radius: 4px; /* 텍스트박스의 테두리 모서리 둥글기 */
+			box-sizing: border-box; /* 텍스트박스의 너비와 높이에 안쪽 여백과 테두리 두께를 포함시키기 */
+            
+		}
+
+        form {
+        display: inline-block;
+        text-align: left;
+    }
+
+    div:first-of-type input {
+    background-color: rgb(65, 75, 189);
+    color : white;
+  }
+
+  
+  #invest-button {
+    font-size: 20px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+#invest-button.clicked {
+  background-color: green;
+}
+
+.next-page-btn {
+  background-color: #000000; /* 배경색 */
+  color: #ffffff; /* 글자색 */
+  border: none; /* 테두리 없애기 */
+  border-radius: 5px; /* 둥근 테두리 만들기 */
+  padding: 10px 20px; /* 버튼 내부 여백 */
+  font-size: 30px; /* 폰트 크기 */
+  cursor: pointer; /* 마우스 포인터 모양 변경 */
+  transition: all 0.3s ease; /* 호버 효과를 위한 애니메이션 속성 */
+  text-decoration: none;
+}
+
+.next-page-btn:hover {
+  background-color: #0069d9; /* 호버시 배경색 변경 */
+  color: #fff; /* 호버시 글자색 변경 */
+} 
+.button-container {
+      text-align: right;
+      margin-top: 20px;
+    }
+
+        </style>
+    </head>
+
+    <body>
+
+        <h1>2010년 투자</h1>
+        
+        
+        
+        <button onclick="useValues()" style="background-color: rgb(0, 0, 0); color: white; border: none; width: 150px; height: 50px; font-size : 16px;">저장값 불러오기</button>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <form>
+            <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="textbox1">법인명</label>
+            <input type="text" id="textbox1" name="textbox1">
+            <label for="textbox2">법인명</label>
+            <input type="text" id="textbox2" name="textbox2">
+            <label for="textbox3">법인명</label>
+            <input type="text" id="textbox3" name="textbox3">
+            <label for="textbox4">법인명</label>
+            <input type="text" id="textbox4" name="textbox4">
+            <label for="textbox5">법인명</label>
+            <input type="text" id="textbox5" name="textbox5">
+            <label for="textbox6">법인명</label>
+            <input type="text" id="textbox6" name="textbox6">
+            <label for="textbox7">법인명</label>
+            <input type="text" id="textbox7" name="textbox7">
+            <label for="textbox8">법인명</label>
+            <input type="text" id="textbox8" name="textbox8">
+            <label for="textbox9">법인명</label>
+            <input type="text" id="textbox9" name="textbox9">
+            <label for="textbox10">법인명</label>
+            <input type="text" id="textbox10" name="textbox10">
+        </div>
+        <br>
+
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="capital1">자본금</label>
+            <input type="text" id="capital1" name="capital1" >
+            <label for="capital2">자본금</label>
+            <input type="text" id="capital2" name="capital2" >
+            <label for="capital3">자본금</label>
+            <input type="text" id="capital3" name="capital3" >
+            <label for="capital4">자본금</label>
+            <input type="text" id="capital4" name="capital4" >
+            <label for="capital5">자본금</label>
+            <input type="text" id="capital5" name="capital5" >
+            <label for="capital6">자본금</label>
+            <input type="text" id="capital6" name="capital6" >
+            <label for="capital7">자본금</label>
+            <input type="text" id="capital7" name="capital7" >
+            <label for="capital8">자본금</label>
+            <input type="text" id="capital8" name="capital8" >
+            <label for="capital9">자본금</label>
+            <input type="text" id="capital9" name="capital9" >
+            <label for="capital10">자본금</label>
+            <input type="text" id="capital10" name="capital10" >
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="sum1">투자합계</label>
+            <input type="text" id="sum1" name="sum1" value = "0" readonly>
+            <label for="sum2">투자합계</label>
+            <input type="text" id="sum2" name="sum2" value = "0" readonly>
+            <label for="sum3">투자합계</label>
+            <input type="text" id="sum3" name="sum3" value = "0" readonly>
+            <label for="sum4">투자합계</label>
+            <input type="text" id="sum4" name="sum4" value = "0" readonly>
+            <label for="sum5">투자합계</label>
+            <input type="text" id="sum5" name="sum5" value = "0" readonly>
+            <label for="sum6">투자합계</label>
+            <input type="text" id="sum6" name="sum6" value = "0" readonly>
+            <label for="sum">투자합계</label>
+            <input type="text" id="sum7" name="sum7" value = "0" readonly>
+            <label for="sum8">투자합계</label>
+            <input type="text" id="sum8" name="sum8" value = "0" readonly>
+            <label for="sum9">투자합계</label>
+            <input type="text" id="sum9" name="sum9" value = "0" readonly>
+            <label for="sum10">투자합계</label>
+            <input type="text" id="sum10" name="sum10" value = "0" readonly>
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1a">A기업</label>
+            <input type="text" id="text1a" name="text1a"value = "0" oninput="add1()">
+            <label for="text2a">A기업</label>
+            <input type="text" id="text2a" name="text2a" value = "0" oninput="add2()">
+            <label for="text3a">A기업</label>
+            <input type="text" id="text3a" name="text3a" value = "0" oninput="add3()">
+            <label for="text4a">A기업</label>
+            <input type="text" id="text4a" name="text4a" value = "0" oninput="add4()">
+            <label for="text5a">A기업</label>
+            <input type="text" id="text5a" name="text5a" value = "0" oninput="add5()">
+            <label for="text6a">A기업</label>
+            <input type="text" id="text6a" name="text6a" value = "0" oninput="add6()">
+            <label for="text7a">A기업</label>
+            <input type="text" id="text7a" name="text7a" value = "0" oninput="add7()">
+            <label for="text8a">A기업</label>
+            <input type="text" id="text8a" name="text8a" value = "0" oninput="add8()">
+            <label for="text9a">A기업</label>
+            <input type="text" id="text9a" name="text9a" value = "0" oninput="add9()">
+            <label for="text10a">A기업</label>
+            <input type="text" id="text10a" name="text10a" value = "0" oninput="add10()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1b">B기업</label>
+            <input type="text" id="text1b" name="text1b"value = "0" oninput="add1()">
+            <label for="text2b">B기업</label>
+            <input type="text" id="text2b" name="text2b" value = "0" oninput="add3()">
+            <label for="text3b">B기업</label>
+            <input type="text" id="text3b" name="text3b" value = "0" oninput="add3()">
+            <label for="text4b">B기업</label>
+            <input type="text" id="text4b" name="text4b" value = "0" oninput="add4()">
+            <label for="text5b">B기업</label>
+            <input type="text" id="text5b" name="text5b" value = "0" oninput="add5()">
+            <label for="text6b">B기업</label>
+            <input type="text" id="text6b" name="text6b" value = "0" oninput="add6()">
+            <label for="text7b">B기업</label>
+            <input type="text" id="text7b" name="text7b" value = "0" oninput="add7()">
+            <label for="text8b">B기업</label>
+            <input type="text" id="text8b" name="text8b" value = "0" oninput="add8()">
+            <label for="text9b">B기업</label>
+            <input type="text" id="text9b" name="text9b" value = "0" oninput="add9()">
+            <label for="text10b">B기업</label>
+            <input type="text" id="text10b" name="text10b" value = "0" oninput="add10()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1c">C기업</label>
+            <input type="text" id="text1c" name="text1c"value = "0" oninput="add1()">
+            <label for="text2c">C기업</label>
+            <input type="text" id="text2c" name="text2c" value = "0" oninput="add2()">
+            <label for="text3c">C기업</label>
+            <input type="text" id="text3c" name="text3c" value = "0" oninput="add3()">
+            <label for="text4c">C기업</label>
+            <input type="text" id="text4c" name="text4c" value = "0" oninput="add4()">
+            <label for="text5c">C기업</label>
+            <input type="text" id="text5c" name="text5c" value = "0" oninput="add5()">
+            <label for="text6c">C기업</label>
+            <input type="text" id="text6c" name="text6c" value = "0" oninput="add6()">
+            <label for="text7c">C기업</label>
+            <input type="text" id="text7c" name="text7c" value = "0" oninput="add7()">
+            <label for="text8c">C기업</label>
+            <input type="text" id="text8c" name="text8c" value = "0" oninput="add8()">
+            <label for="text9c">C기업</label>
+            <input type="text" id="text9c" name="text9c" value = "0" oninput="add9()">
+            <label for="text10c">C기업</label>
+            <input type="text" id="text10c" name="text10c" value = "0" oninput="add10()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1d">D기업</label>
+            <input type="text" id="text1d" name="text1d"value = "0" oninput="add1()">
+            <label for="text2d">D기업</label>
+            <input type="text" id="text2d" name="text2d" value = "0" oninput="add2()">
+            <label for="text3d">D기업</label>
+            <input type="text" id="text3d" name="text3d" value = "0" oninput="add3()">
+            <label for="text4d">D기업</label>
+            <input type="text" id="text4d" name="text4d" value = "0" oninput="add4()">
+            <label for="text5d">D기업</label>
+            <input type="text" id="text5d" name="text5d" value = "0" oninput="add5()">
+            <label for="text6d">D기업</label>
+            <input type="text" id="text6d" name="text6d" value = "0" oninput="add6()">
+            <label for="text7d">D기업</label>
+            <input type="text" id="text7d" name="text7d" value = "0" oninput="add7()">
+            <label for="text8d">D기업</label>
+            <input type="text" id="text8d" name="text8d" value = "0" oninput="add8()">
+            <label for="text9d">D기업</label>
+            <input type="text" id="text9d" name="text9d" value = "0" oninput="add9()">
+            <label for="text10d">D기업</label>
+            <input type="text" id="text10d" name="text10d" value = "0" oninput="add10()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1e">E기업</label>
+            <input type="text" id="text1e" name="text1e"value = "0" oninput="add1()">
+            <label for="text2e">E기업</label>
+            <input type="text" id="text2e" name="text2e" value = "0" oninput="add2()">
+            <label for="text3e">E기업</label>
+            <input type="text" id="text3e" name="text3e" value = "0" oninput="add3()">
+            <label for="text4e">E기업</label>
+            <input type="text" id="text4e" name="text4e" value = "0" oninput="add4()">
+            <label for="text5e">E기업</label>
+            <input type="text" id="text5e" name="text5e" value = "0" oninput="add5()">
+            <label for="text6e">E기업</label>
+            <input type="text" id="text6e" name="text6e" value = "0" oninput="add6()">
+            <label for="text7e">E기업</label>
+            <input type="text" id="text7e" name="text7e" value = "0" oninput="add7()">
+            <label for="text8e">E기업</label>
+            <input type="text" id="text8e" name="text8e" value = "0" oninput="add8()">
+            <label for="text9e">E기업</label>
+            <input type="text" id="text9e" name="text9e" value = "0" oninput="add9()">
+            <label for="text10e">E기업</label>
+            <input type="text" id="text10e" name="text10e" value = "0" oninput="add10()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1f">F기업</label>
+            <input type="text" id="text1f" name="text1f"value = "0" oninput="add1()">
+            <label for="text2f">F기업</label>
+            <input type="text" id="text2f" name="text2f" value = "0" oninput="add2()">
+            <label for="text3f">F기업</label>
+            <input type="text" id="text3f" name="text3f" value = "0" oninput="add3()">
+            <label for="text4f">F기업</label>
+            <input type="text" id="text4f" name="text4f" value = "0" oninput="add4()">
+            <label for="text5f">F기업</label>
+            <input type="text" id="text5f" name="text5f" value = "0" oninput="add5()">
+            <label for="text6f">F기업</label>
+            <input type="text" id="text6f" name="text6f" value = "0" oninput="add6()">
+            <label for="text7f">F기업</label>
+            <input type="text" id="text7f" name="text7f" value = "0" oninput="add7()">
+            <label for="text8f">F기업</label>
+            <input type="text" id="text8f" name="text8f" value = "0" oninput="add8()">
+            <label for="text9f">F기업</label>
+            <input type="text" id="text9f" name="text9f" value = "0" oninput="add9()">
+            <label for="text10f">F기업</label>
+            <input type="text" id="text10f" name="text10f" value = "0" oninput="add10()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1g">G기업</label>
+            <input type="text" id="text1g" name="text1g"value = "0" oninput="add1()">
+            <label for="text2g">G기업</label>
+            <input type="text" id="text2g" name="text2g" value = "0" oninput="add2()">
+            <label for="text3g">G기업</label>
+            <input type="text" id="text3g" name="text3g" value = "0" oninput="add3()">
+            <label for="text4g">G기업</label>
+            <input type="text" id="text4g" name="text4g" value = "0" oninput="add4()">
+            <label for="text5g">G기업</label>
+            <input type="text" id="text5g" name="text5g" value = "0" oninput="add5()">
+            <label for="text6g">G기업</label>
+            <input type="text" id="text6g" name="text6g" value = "0" oninput="add6()">
+            <label for="text7g">G기업</label>
+            <input type="text" id="text7g" name="text7g" value = "0" oninput="add7()">
+            <label for="text8g">G기업</label>
+            <input type="text" id="text8g" name="text8g" value = "0" oninput="add8()">
+            <label for="text9g">G기업</label>
+            <input type="text" id="text9g" name="text9g" value = "0" oninput="add9()">
+            <label for="text10g">G기업</label>
+            <input type="text" id="text10g" name="text10g" value = "0" oninput="add10()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1h">H기업</label>
+            <input type="text" id="text1h" name="text1h"value = "0" oninput="add1()">
+            <label for="text2h">H기업</label>
+            <input type="text" id="text2h" name="text2h" value = "0" oninput="add2()">
+            <label for="text3h">H기업</label>
+            <input type="text" id="text3h" name="text3h" value = "0" oninput="add3()">
+            <label for="text4h">H기업</label>
+            <input type="text" id="text4h" name="text4h" value = "0" oninput="add4()">
+            <label for="text5h">H기업</label>
+            <input type="text" id="text5h" name="text5h" value = "0" oninput="add5()">
+            <label for="text6h">H기업</label>
+            <input type="text" id="text6h" name="text6h" value = "0" oninput="add6()">
+            <label for="text7h">H기업</label>
+            <input type="text" id="text7h" name="text7h" value = "0" oninput="add7()">
+            <label for="text8h">H기업</label>
+            <input type="text" id="text8h" name="text8h" value = "0" oninput="add8()">
+            <label for="text9h">H기업</label>
+            <input type="text" id="text9h" name="text9h" value = "0" oninput="add9()">
+            <label for="text10h">H기업</label>
+            <input type="text" id="text10h" name="text10h" value = "0" oninput="add10()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1i">I기업</label>
+            <input type="text" id="text1i" name="text1i"value = "0" oninput="add1()">
+            <label for="text2i">I기업</label>
+            <input type="text" id="text2i" name="text2i" value = "0" oninput="add2()">
+            <label for="text3i">I기업</label>
+            <input type="text" id="text3i" name="text3i" value = "0" oninput="add3()">
+            <label for="text4i">I기업</label>
+            <input type="text" id="text4i" name="text4i" value = "0" oninput="add4()">
+            <label for="text5i">I기업</label>
+            <input type="text" id="text5i" name="text5i" value = "0" oninput="add5()">
+            <label for="text6i">I기업</label>
+            <input type="text" id="text6i" name="text6i" value = "0" oninput="add6()">
+            <label for="text7i">I기업</label>
+            <input type="text" id="text7i" name="text7i" value = "0" oninput="add7()">
+            <label for="text8i">I기업</label>
+            <input type="text" id="text8i" name="text8i" value = "0" oninput="add8()">
+            <label for="text9i">I기업</label>
+            <input type="text" id="text9i" name="text9i" value = "0" oninput="add9()">
+            <label for="text10i">I기업</label>
+            <input type="text" id="text10i" name="text10i" value = "0" oninput="add10()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1j">J기업</label>
+            <input type="text" id="text1j" name="text1j"value = "0" oninput="add1()">
+            <label for="text2j">J기업</label>
+            <input type="text" id="text2j" name="text2j" value = "0" oninput="add2()">
+            <label for="text3j">J기업</label>
+            <input type="text" id="text3j" name="text3j" value = "0" oninput="add3()">
+            <label for="text4j">J기업</label>
+            <input type="text" id="text4j" name="text4j" value = "0" oninput="add4()">
+            <label for="text5j">J기업</label>
+            <input type="text" id="text5j" name="text5j" value = "0" oninput="add5()">
+            <label for="text6j">J기업</label>
+            <input type="text" id="text6j" name="text6j" value = "0" oninput="add6()">
+            <label for="text7j">J기업</label>
+            <input type="text" id="text7j" name="text7j" value = "0" oninput="add7()">
+            <label for="text8j">J기업</label>
+            <input type="text" id="text8j" name="text8j" value = "0" oninput="add8()">
+            <label for="text9j">J기업</label>
+            <input type="text" id="text9j" name="text9j" value = "0" oninput="add9()">
+            <label for="text10j">J기업</label>
+            <input type="text" id="text10j" name="text10j" value = "0" oninput="add10()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1k">K기업</label>
+            <input type="text" id="text1k" name="text1k"value = "0" oninput="add1()">
+            <label for="text2k">K기업</label>
+            <input type="text" id="text2k" name="text2k" value = "0" oninput="add2()">
+            <label for="text3k">K기업</label>
+            <input type="text" id="text3k" name="text3k" value = "0" oninput="add3()">
+            <label for="text4k">K기업</label>
+            <input type="text" id="text4k" name="text4k" value = "0" oninput="add4()">
+            <label for="text5k">K기업</label>
+            <input type="text" id="text5k" name="text5k" value = "0" oninput="add5()">
+            <label for="text6k">K기업</label>
+            <input type="text" id="text6k" name="text6k" value = "0" oninput="add6()">
+            <label for="text7k">K기업</label>
+            <input type="text" id="text7k" name="text7k" value = "0" oninput="add7()">
+            <label for="text8k">K기업</label>
+            <input type="text" id="text8k" name="text8k" value = "0" oninput="add8()">
+            <label for="text9k">K기업</label>
+            <input type="text" id="text9k" name="text9k" value = "0" oninput="add9()">
+            <label for="text10k">K기업</label>
+            <input type="text" id="text10k" name="text10k" value = "0" oninput="add10()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1l">L기업</label>
+            <input type="text" id="text1l" name="text1l"value = "0" oninput="add1()">
+            <label for="text2l">L기업</label>
+            <input type="text" id="text2l" name="text2l" value = "0" oninput="add2()">
+            <label for="text3l">L기업</label>
+            <input type="text" id="text3l" name="text3l" value = "0" oninput="add3()">
+            <label for="text4l">L기업</label>
+            <input type="text" id="text4l" name="text4l" value = "0" oninput="add4()">
+            <label for="text5l">L기업</label>
+            <input type="text" id="text5l" name="text5l" value = "0" oninput="add5()">
+            <label for="text6l">L기업</label>
+            <input type="text" id="text6l" name="text6l" value = "0" oninput="add6()">
+            <label for="text7l">L기업</label>
+            <input type="text" id="text7l" name="text7l" value = "0" oninput="add7()">
+            <label for="text8l">L기업</label>
+            <input type="text" id="text8l" name="text8l" value = "0" oninput="add8()">
+            <label for="text9l">L기업</label>
+            <input type="text" id="text9l" name="text9l" value = "0" oninput="add9()">
+            <label for="text10l">L기업</label>
+            <input type="text" id="text10l" name="text10l" value = "0" oninput="add10()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1x">투자X</label>
+            <input type="text" id="text1x" name="text1x"value = "0" oninput="add1()">
+            <label for="text2x">투자X</label>
+            <input type="text" id="text2x" name="text2x" value = "0" oninput="add2()">
+            <label for="text3x">투자X</label>
+            <input type="text" id="text3x" name="text3x" value = "0" oninput="add3()">
+            <label for="text4x">투자X</label>
+            <input type="text" id="text4x" name="text4x" value = "0" oninput="add4()">
+            <label for="text5x">투자X</label>
+            <input type="text" id="text5x" name="text5x" value = "0" oninput="add5()">
+            <label for="text6x">투자X</label>
+            <input type="text" id="text6x" name="text6x" value = "0" oninput="add6()">
+            <label for="text7x">투자X</label>
+            <input type="text" id="text7x" name="text7x" value = "0" oninput="add7()">
+            <label for="text8x">투자X</label>
+            <input type="text" id="text8x" name="text8x" value = "0" oninput="add8()">
+            <label for="text9x">투자X</label>
+            <input type="text" id="text9x" name="text9x" value = "0" oninput="add9()">
+            <label for="text10x">투자X</label>
+            <input type="text" id="text10x" name="text10x" value = "0" oninput="add10()">
+        </div>
+
+        
+        </form>
+        <br>
+        <br>
+        <br>
+        <button onclick="saveValues()" style="background-color: rgb(0, 0, 0); color: white; border: none; width: 150px; height: 50px;">투자 완료</button>
+  
+        <br>
+        <div class="button-container" >
+            <a href="index18.html" class="next-page-btn">다음</a>
+          </div>
+        
+<script>
+
+window.onload = function() {
+  const maxLength = 0; // 최대 소수점 자릿수
+  const inputs = document.querySelectorAll("input[type='text']");
+  inputs.forEach(input => {
+    input.addEventListener("input", function() {
+      const parts = this.value.split(".");
+      if (parts.length === 2) {
+        // 소수점이 존재하는 경우
+        const integerPart = parts[0];
+        let decimalPart = parts[1];
+        if (decimalPart.length > maxLength) {
+          decimalPart = decimalPart.substring(0, maxLength);
+        }
+        this.value = `${integerPart}.${decimalPart}`;
+      }
+    });
+  });
+};
+
+function truncateInput(input) {
+  const maxLength = 2; // 최대 소수점 자릿수
+  input.value = truncateDecimal(input.value, maxLength);
+}
+
+
+
+  function add1() {
+  var num1a = parseFloat(document.getElementById("text1a").value);
+  var num1b = parseFloat(document.getElementById("text1b").value);
+  var num1c = parseFloat(document.getElementById("text1c").value);
+  var num1d = parseFloat(document.getElementById("text1d").value);
+  var num1e = parseFloat(document.getElementById("text1e").value);
+  var num1f = parseFloat(document.getElementById("text1f").value);
+  var num1g = parseFloat(document.getElementById("text1g").value);
+  var num1h = parseFloat(document.getElementById("text1h").value);
+  var num1i = parseFloat(document.getElementById("text1i").value);
+  var num1j = parseFloat(document.getElementById("text1j").value);
+  var num1k = parseFloat(document.getElementById("text1k").value);
+  var num1l = parseFloat(document.getElementById("text1l").value);
+  var num1x = parseFloat(document.getElementById("text1x").value);
+  var sum1 = num1a + num1b + num1c + num1d + num1e + num1f + num1g + num1h + num1i + num1j + num1k + num1l + num1x;
+  document.getElementById("sum1").value = sum1;
+  }  
+
+  function add2() {
+  var num2a = parseFloat(document.getElementById("text2a").value);
+  var num2b = parseFloat(document.getElementById("text2b").value);
+  var num2c = parseFloat(document.getElementById("text2c").value);
+  var num2d = parseFloat(document.getElementById("text2d").value);
+  var num2e = parseFloat(document.getElementById("text2e").value);
+  var num2f = parseFloat(document.getElementById("text2f").value);
+  var num2g = parseFloat(document.getElementById("text2g").value);
+  var num2h = parseFloat(document.getElementById("text2h").value);
+  var num2i = parseFloat(document.getElementById("text2i").value);
+  var num2j = parseFloat(document.getElementById("text2j").value);
+  var num2k = parseFloat(document.getElementById("text2k").value);
+  var num2l = parseFloat(document.getElementById("text2l").value);
+  var num2x = parseFloat(document.getElementById("text2x").value);
+  var sum2 = num2a + num2b + num2c + num2d + num2e + num2f + num2g + num2h + num2i + num2j + num2k + num2l + num2x;
+  document.getElementById("sum2").value = sum2;
+  }  
+
+  function add3() {
+  var num3a = parseFloat(document.getElementById("text3a").value);
+  var num3b = parseFloat(document.getElementById("text3b").value);
+  var num3c = parseFloat(document.getElementById("text3c").value);
+  var num3d = parseFloat(document.getElementById("text3d").value);
+  var num3e = parseFloat(document.getElementById("text3e").value);
+  var num3f = parseFloat(document.getElementById("text3f").value);
+  var num3g = parseFloat(document.getElementById("text3g").value);
+  var num3h = parseFloat(document.getElementById("text3h").value);
+  var num3i = parseFloat(document.getElementById("text3i").value);
+  var num3j = parseFloat(document.getElementById("text3j").value);
+  var num3k = parseFloat(document.getElementById("text3k").value);
+  var num3l = parseFloat(document.getElementById("text3l").value);
+  var num3x = parseFloat(document.getElementById("text3x").value);
+  var sum3 = num3a + num3b + num3c + num3d + num3e + num3f + num3g + num3h + num3i + num3j + num3k + num3l + num3x;
+  document.getElementById("sum3").value = sum3;
+  }  
+
+  function add4() {
+  var num4a = parseFloat(document.getElementById("text4a").value);
+  var num4b = parseFloat(document.getElementById("text4b").value);
+  var num4c = parseFloat(document.getElementById("text4c").value);
+  var num4d = parseFloat(document.getElementById("text4d").value);
+  var num4e = parseFloat(document.getElementById("text4e").value);
+  var num4f = parseFloat(document.getElementById("text4f").value);
+  var num4g = parseFloat(document.getElementById("text4g").value);
+  var num4h = parseFloat(document.getElementById("text4h").value);
+  var num4i = parseFloat(document.getElementById("text4i").value);
+  var num4j = parseFloat(document.getElementById("text4j").value);
+  var num4k = parseFloat(document.getElementById("text4k").value);
+  var num4l = parseFloat(document.getElementById("text4l").value);
+  var num4x = parseFloat(document.getElementById("text4x").value);
+  var sum4 = num4a + num4b + num4c + num4d + num4e + num4f + num4g + num4h + num4i + num4j + num4k + num4l + num4x;
+  document.getElementById("sum4").value = sum4;
+  }  
+
+  function add5() {
+  var num5a = parseFloat(document.getElementById("text5a").value);
+  var num5b = parseFloat(document.getElementById("text5b").value);
+  var num5c = parseFloat(document.getElementById("text5c").value);
+  var num5d = parseFloat(document.getElementById("text5d").value);
+  var num5e = parseFloat(document.getElementById("text5e").value);
+  var num5f = parseFloat(document.getElementById("text5f").value);
+  var num5g = parseFloat(document.getElementById("text5g").value);
+  var num5h = parseFloat(document.getElementById("text5h").value);
+  var num5i = parseFloat(document.getElementById("text5i").value);
+  var num5j = parseFloat(document.getElementById("text5j").value);
+  var num5k = parseFloat(document.getElementById("text5k").value);
+  var num5l = parseFloat(document.getElementById("text5l").value);
+  var num5x = parseFloat(document.getElementById("text5x").value);
+  var sum5 = num5a + num5b + num5c + num5d + num5e + num5f + num5g + num5h + num5i + num5j + num5k + num5l + num5x;
+  document.getElementById("sum5").value = sum5;
+  }  
+
+  function add6() {
+  var num6a = parseFloat(document.getElementById("text6a").value);
+  var num6b = parseFloat(document.getElementById("text6b").value);
+  var num6c = parseFloat(document.getElementById("text6c").value);
+  var num6d = parseFloat(document.getElementById("text6d").value);
+  var num6e = parseFloat(document.getElementById("text6e").value);
+  var num6f = parseFloat(document.getElementById("text6f").value);
+  var num6g = parseFloat(document.getElementById("text6g").value);
+  var num6h = parseFloat(document.getElementById("text6h").value);
+  var num6i = parseFloat(document.getElementById("text6i").value);
+  var num6j = parseFloat(document.getElementById("text6j").value);
+  var num6k = parseFloat(document.getElementById("text6k").value);
+  var num6l = parseFloat(document.getElementById("text6l").value);
+  var num6x = parseFloat(document.getElementById("text6x").value);
+  var sum6 = num6a + num6b + num6c + num6d + num6e + num6f + num6g + num6h + num6i + num6j + num6k + num6l + num6x;
+  document.getElementById("sum6").value = sum6;
+  }  
+
+  function add7() {
+  var num7a = parseFloat(document.getElementById("text7a").value);
+  var num7b = parseFloat(document.getElementById("text7b").value);
+  var num7c = parseFloat(document.getElementById("text7c").value);
+  var num7d = parseFloat(document.getElementById("text7d").value);
+  var num7e = parseFloat(document.getElementById("text7e").value);
+  var num7f = parseFloat(document.getElementById("text7f").value);
+  var num7g = parseFloat(document.getElementById("text7g").value);
+  var num7h = parseFloat(document.getElementById("text7h").value);
+  var num7i = parseFloat(document.getElementById("text7i").value);
+  var num7j = parseFloat(document.getElementById("text7j").value);
+  var num7k = parseFloat(document.getElementById("text7k").value);
+  var num7l = parseFloat(document.getElementById("text7l").value);
+  var num7x = parseFloat(document.getElementById("text7x").value);
+  var sum7 = num7a + num7b + num7c + num7d + num7e + num7f + num7g + num7h + num7i + num7j + num7k + num7l + num7x;
+  document.getElementById("sum7").value = sum7;
+  }  
+
+  function add8() {
+  var num8a = parseFloat(document.getElementById("text8a").value);
+  var num8b = parseFloat(document.getElementById("text8b").value);
+  var num8c = parseFloat(document.getElementById("text8c").value);
+  var num8d = parseFloat(document.getElementById("text8d").value);
+  var num8e = parseFloat(document.getElementById("text8e").value);
+  var num8f = parseFloat(document.getElementById("text8f").value);
+  var num8g = parseFloat(document.getElementById("text8g").value);
+  var num8h = parseFloat(document.getElementById("text8h").value);
+  var num8i = parseFloat(document.getElementById("text8i").value);
+  var num8j = parseFloat(document.getElementById("text8j").value);
+  var num8k = parseFloat(document.getElementById("text8k").value);
+  var num8l = parseFloat(document.getElementById("text8l").value);
+  var num8x = parseFloat(document.getElementById("text8x").value);
+  var sum8 = num8a + num8b + num8c + num8d + num8e + num8f + num8g + num8h + num8i + num8j + num8k + num8l + num8x;
+  document.getElementById("sum8").value = sum8;
+  }  
+
+  function add9() {
+  var num9a = parseFloat(document.getElementById("text9a").value);
+  var num9b = parseFloat(document.getElementById("text9b").value);
+  var num9c = parseFloat(document.getElementById("text9c").value);
+  var num9d = parseFloat(document.getElementById("text9d").value);
+  var num9e = parseFloat(document.getElementById("text9e").value);
+  var num9f = parseFloat(document.getElementById("text9f").value);
+  var num9g = parseFloat(document.getElementById("text9g").value);
+  var num9h = parseFloat(document.getElementById("text9h").value);
+  var num9i = parseFloat(document.getElementById("text9i").value);
+  var num9j = parseFloat(document.getElementById("text9j").value);
+  var num9k = parseFloat(document.getElementById("text9k").value);
+  var num9l = parseFloat(document.getElementById("text9l").value);
+  var num9x = parseFloat(document.getElementById("text9x").value);
+  var sum9 = num9a + num9b + num9c + num9d + num9e + num9f + num9g + num9h + num9i + num9j + num9k + num9l + num9x;
+  document.getElementById("sum9").value = sum9;
+  }  
+
+  function add10() {
+  var num10a = parseFloat(document.getElementById("text10a").value);
+  var num10b = parseFloat(document.getElementById("text10b").value);
+  var num10c = parseFloat(document.getElementById("text10c").value);
+  var num10d = parseFloat(document.getElementById("text10d").value);
+  var num10e = parseFloat(document.getElementById("text10e").value);
+  var num10f = parseFloat(document.getElementById("text10f").value);
+  var num10g = parseFloat(document.getElementById("text10g").value);
+  var num10h = parseFloat(document.getElementById("text10h").value);
+  var num10i = parseFloat(document.getElementById("text10i").value);
+  var num10j = parseFloat(document.getElementById("text10j").value);
+  var num10k = parseFloat(document.getElementById("text10k").value);
+  var num10l = parseFloat(document.getElementById("text10l").value);
+  var num10x = parseFloat(document.getElementById("text10x").value);
+  var sum10 = num10a + num10b + num10c + num10d + num10e + num10f + num10g + num10h + num10i + num10j + num10k + num10l + num10x;
+  document.getElementById("sum10").value = sum10;
+  }  
+    
+  function useValues() {
+    // 저장된 값을 가져와 변수에 저장합니다.
+    var value1ca = sessionStorage.getItem("value1ca");
+    var value2ca = sessionStorage.getItem("value2ca");
+    var value3ca = sessionStorage.getItem("value3ca");
+    var value4ca = sessionStorage.getItem("value4ca");
+    var value5ca = sessionStorage.getItem("value5ca");
+    var value6ca = sessionStorage.getItem("value6ca");
+    var value7ca = sessionStorage.getItem("value7ca");
+    var value8ca = sessionStorage.getItem("value8ca");
+    var value9ca = sessionStorage.getItem("value9ca");
+    var value10ca = sessionStorage.getItem("value10ca");
+
+    var value1 = sessionStorage.getItem("value1");
+    var value2 = sessionStorage.getItem("value2");
+    var value3 = sessionStorage.getItem("value3");
+    var value4 = sessionStorage.getItem("value4");
+    var value5 = sessionStorage.getItem("value5");
+    var value6 = sessionStorage.getItem("value6");
+    var value7 = sessionStorage.getItem("value7");
+    var value8 = sessionStorage.getItem("value8");
+    var value9 = sessionStorage.getItem("value9");
+    var value10 = sessionStorage.getItem("value10");
+
+    document.getElementById("capital1").value = value1ca;
+    document.getElementById("capital2").value = value2ca;
+    document.getElementById("capital3").value = value3ca;
+    document.getElementById("capital4").value = value4ca;
+    document.getElementById("capital5").value = value5ca;
+    document.getElementById("capital6").value = value6ca;
+    document.getElementById("capital7").value = value7ca;
+    document.getElementById("capital8").value = value8ca;
+    document.getElementById("capital9").value = value9ca;
+    document.getElementById("capital10").value = value10ca;
+
+    document.getElementById("textbox1").value = value1;
+    document.getElementById("textbox2").value = value2;
+    document.getElementById("textbox3").value = value3;
+    document.getElementById("textbox4").value = value4;
+    document.getElementById("textbox5").value = value5;
+    document.getElementById("textbox6").value = value6;
+    document.getElementById("textbox7").value = value7;
+    document.getElementById("textbox8").value = value8;
+    document.getElementById("textbox9").value = value9;
+    document.getElementById("textbox10").value = value10;
+
+    // 변수에 저장된 값을 사용합니다.
+    alert("불러오기 완료");
+  }
+
+  function saveValues() {
+      // 각 텍스트 박스의 값을 변수에 저장합니다.
+      var value1a = document.getElementById("text1a").value*1.02;
+      var value1b = document.getElementById("text1b").value*1.87;
+      var value1c = document.getElementById("text1c").value*1.54;
+      var value1d = document.getElementById("text1d").value*1.96;
+      var value1e = document.getElementById("text1e").value*1.51;
+      var value1f = document.getElementById("text1f").value*1.23;
+      var value1g = document.getElementById("text1g").value*1.47;
+      var value1h = document.getElementById("text1h").value*12.52;
+      var value1i = document.getElementById("text1i").value*3.92;
+      var value1j = document.getElementById("text1j").value*1.42;
+      var value1k = document.getElementById("text1k").value*1.46;
+      var value1l = document.getElementById("text1l").value*2.01;
+      var value1x = document.getElementById("text1x").value;  //1번팀
+
+      var value2a = document.getElementById("text2a").value*1.02;
+      var value2b = document.getElementById("text2b").value*1.87;
+      var value2c = document.getElementById("text2c").value*1.54;
+      var value2d = document.getElementById("text2d").value*1.96;
+      var value2e = document.getElementById("text2e").value*1.51;
+      var value2f = document.getElementById("text2f").value*1.23;
+      var value2g = document.getElementById("text2g").value*1.47;
+      var value2h = document.getElementById("text2h").value*12.52;
+      var value2i = document.getElementById("text2i").value*3.92;
+      var value2j = document.getElementById("text2j").value*1.42;
+      var value2k = document.getElementById("text2k").value*1.46;
+      var value2l = document.getElementById("text2l").value*2.01;
+      var value2x = document.getElementById("text2x").value;  //2번팀
+
+      var value3a = document.getElementById("text3a").value*1.02;
+      var value3b = document.getElementById("text3b").value*1.87;
+      var value3c = document.getElementById("text3c").value*1.54;
+      var value3d = document.getElementById("text3d").value*1.96;
+      var value3e = document.getElementById("text3e").value*1.51;
+      var value3f = document.getElementById("text3f").value*1.23;
+      var value3g = document.getElementById("text3g").value*1.47;
+      var value3h = document.getElementById("text3h").value*12.52;
+      var value3i = document.getElementById("text3i").value*3.92;
+      var value3j = document.getElementById("text3j").value*1.42;
+      var value3k = document.getElementById("text3k").value*1.46;
+      var value3l = document.getElementById("text3l").value*2.01;
+      var value3x = document.getElementById("text3x").value;  //3번팀
+
+      var value4a = document.getElementById("text4a").value*1.02;
+      var value4b = document.getElementById("text4b").value*1.87;
+      var value4c = document.getElementById("text4c").value*1.54;
+      var value4d = document.getElementById("text4d").value*1.96;
+      var value4e = document.getElementById("text4e").value*1.51;
+      var value4f = document.getElementById("text4f").value*1.23;
+      var value4g = document.getElementById("text4g").value*1.47;
+      var value4h = document.getElementById("text4h").value*12.52;
+      var value4i = document.getElementById("text4i").value*3.92;
+      var value4j = document.getElementById("text4j").value*1.42;
+      var value4k = document.getElementById("text4k").value*1.46;
+      var value4l = document.getElementById("text4l").value*2.01;
+      var value4x = document.getElementById("text4x").value;  //4번팀
+
+      var value5a = document.getElementById("text5a").value*1.02;
+      var value5b = document.getElementById("text5b").value*1.87;
+      var value5c = document.getElementById("text5c").value*1.54;
+      var value5d = document.getElementById("text5d").value*1.96;
+      var value5e = document.getElementById("text5e").value*1.51;
+      var value5f = document.getElementById("text5f").value*1.23;
+      var value5g = document.getElementById("text5g").value*1.47;
+      var value5h = document.getElementById("text5h").value*12.52;
+      var value5i = document.getElementById("text5i").value*3.92;
+      var value5j = document.getElementById("text5j").value*1.42;
+      var value5k = document.getElementById("text5k").value*1.46;
+      var value5l = document.getElementById("text5l").value*2.01;
+      var value5x = document.getElementById("text5x").value;  //5번팀
+
+      var value6a = document.getElementById("text6a").value*1.02;
+      var value6b = document.getElementById("text6b").value*1.87;
+      var value6c = document.getElementById("text6c").value*1.54;
+      var value6d = document.getElementById("text6d").value*1.96;
+      var value6e = document.getElementById("text6e").value*1.51;
+      var value6f = document.getElementById("text6f").value*1.23;
+      var value6g = document.getElementById("text6g").value*1.47;
+      var value6h = document.getElementById("text6h").value*12.52;
+      var value6i = document.getElementById("text6i").value*3.92;
+      var value6j = document.getElementById("text6j").value*1.42;
+      var value6k = document.getElementById("text6k").value*1.46;
+      var value6l = document.getElementById("text6l").value*2.01;
+      var value6x = document.getElementById("text6x").value;  //6번팀
+
+      var value7a = document.getElementById("text7a").value*1.02;
+      var value7b = document.getElementById("text7b").value*1.87;
+      var value7c = document.getElementById("text7c").value*1.54;
+      var value7d = document.getElementById("text7d").value*1.96;
+      var value7e = document.getElementById("text7e").value*1.51;
+      var value7f = document.getElementById("text7f").value*1.23;
+      var value7g = document.getElementById("text7g").value*1.47;
+      var value7h = document.getElementById("text7h").value*12.52;
+      var value7i = document.getElementById("text7i").value*3.92;
+      var value7j = document.getElementById("text7j").value*1.42;
+      var value7k = document.getElementById("text7k").value*1.46;
+      var value7l = document.getElementById("text7l").value*2.01;
+      var value7x = document.getElementById("text7x").value;  //7번팀
+
+      var value8a = document.getElementById("text8a").value*1.02;
+      var value8b = document.getElementById("text8b").value*1.87;
+      var value8c = document.getElementById("text8c").value*1.54;
+      var value8d = document.getElementById("text8d").value*1.96;
+      var value8e = document.getElementById("text8e").value*1.51;
+      var value8f = document.getElementById("text8f").value*1.23;
+      var value8g = document.getElementById("text8g").value*1.47;
+      var value8h = document.getElementById("text8h").value*12.52;
+      var value8i = document.getElementById("text8i").value*3.92;
+      var value8j = document.getElementById("text8j").value*1.42;
+      var value8k = document.getElementById("text8k").value*1.46;
+      var value8l = document.getElementById("text8l").value*2.01;
+      var value8x = document.getElementById("text8x").value;  //8번팀
+
+      var value9a = document.getElementById("text9a").value*1.02;
+      var value9b = document.getElementById("text9b").value*1.87;
+      var value9c = document.getElementById("text9c").value*1.54;
+      var value9d = document.getElementById("text9d").value*1.96;
+      var value9e = document.getElementById("text9e").value*1.51;
+      var value9f = document.getElementById("text9f").value*1.23;
+      var value9g = document.getElementById("text9g").value*1.47;
+      var value9h = document.getElementById("text9h").value*12.52;
+      var value9i = document.getElementById("text9i").value*3.92;
+      var value9j = document.getElementById("text9j").value*1.42;
+      var value9k = document.getElementById("text9k").value*1.46;
+      var value9l = document.getElementById("text9l").value*2.01;
+      var value9x = document.getElementById("text9x").value;  //9번팀
+
+      var value10a = document.getElementById("text10a").value*1.02;
+      var value10b = document.getElementById("text10b").value*1.87;
+      var value10c = document.getElementById("text10c").value*1.54;
+      var value10d = document.getElementById("text10d").value*1.96;
+      var value10e = document.getElementById("text10e").value*1.51;
+      var value10f = document.getElementById("text10f").value*1.23;
+      var value10g = document.getElementById("text10g").value*1.47;
+      var value10h = document.getElementById("text10h").value*12.52;
+      var value10i = document.getElementById("text10i").value*3.92;
+      var value10j = document.getElementById("text10j").value*1.42;
+      var value10k = document.getElementById("text10k").value*1.46;
+      var value10l = document.getElementById("text10l").value*2.01;
+      var value10x = document.getElementById("text10x").value;  //10번팀
+
+
+     
+     
+  
+      // 변수에 저장된 값을 다른 페이지에서 사용할 수 있도록 저장합니다.
+      sessionStorage.setItem("value1a", value1a);
+      sessionStorage.setItem("value1b", value1b);
+      sessionStorage.setItem("value1c", value1c);
+      sessionStorage.setItem("value1d", value1d);
+      sessionStorage.setItem("value1e", value1e);
+      sessionStorage.setItem("value1f", value1f);
+      sessionStorage.setItem("value1g", value1g);
+      sessionStorage.setItem("value1h", value1h);
+      sessionStorage.setItem("value1i", value1i);
+      sessionStorage.setItem("value1j", value1j);
+      sessionStorage.setItem("value1k", value1k);
+      sessionStorage.setItem("value1l", value1l);
+      sessionStorage.setItem("value1x", value1x); //1번팀 변수에 값 저장
+
+      sessionStorage.setItem("value2a", value2a);
+      sessionStorage.setItem("value2b", value2b);
+      sessionStorage.setItem("value2c", value2c);
+      sessionStorage.setItem("value2d", value2d);
+      sessionStorage.setItem("value2e", value2e);
+      sessionStorage.setItem("value2f", value2f);
+      sessionStorage.setItem("value2g", value2g);
+      sessionStorage.setItem("value2h", value2h);
+      sessionStorage.setItem("value2i", value2i);
+      sessionStorage.setItem("value2j", value2j);
+      sessionStorage.setItem("value2k", value2k);
+      sessionStorage.setItem("value2l", value2l);
+      sessionStorage.setItem("value2x", value2x); //2번팀 변수에 값 저장
+
+      sessionStorage.setItem("value3a", value3a);
+      sessionStorage.setItem("value3b", value3b);
+      sessionStorage.setItem("value3c", value3c);
+      sessionStorage.setItem("value3d", value3d);
+      sessionStorage.setItem("value3e", value3e);
+      sessionStorage.setItem("value3f", value3f);
+      sessionStorage.setItem("value3g", value3g);
+      sessionStorage.setItem("value3h", value3h);
+      sessionStorage.setItem("value3i", value3i);
+      sessionStorage.setItem("value3j", value3j);
+      sessionStorage.setItem("value3k", value3k);
+      sessionStorage.setItem("value3l", value3l);
+      sessionStorage.setItem("value3x", value3x); //3번팀 변수에 값 저장
+
+      sessionStorage.setItem("value4a", value4a);
+      sessionStorage.setItem("value4b", value4b);
+      sessionStorage.setItem("value4c", value4c);
+      sessionStorage.setItem("value4d", value4d);
+      sessionStorage.setItem("value4e", value4e);
+      sessionStorage.setItem("value4f", value4f);
+      sessionStorage.setItem("value4g", value4g);
+      sessionStorage.setItem("value4h", value4h);
+      sessionStorage.setItem("value4i", value4i);
+      sessionStorage.setItem("value4j", value4j);
+      sessionStorage.setItem("value4k", value4k);
+      sessionStorage.setItem("value4l", value4l);
+      sessionStorage.setItem("value4x", value4x); //4번팀 변수에 값 저장
+
+      sessionStorage.setItem("value5a", value5a);
+      sessionStorage.setItem("value5b", value5b);
+      sessionStorage.setItem("value5c", value5c);
+      sessionStorage.setItem("value5d", value5d);
+      sessionStorage.setItem("value5e", value5e);
+      sessionStorage.setItem("value5f", value5f);
+      sessionStorage.setItem("value5g", value5g);
+      sessionStorage.setItem("value5h", value5h);
+      sessionStorage.setItem("value5i", value5i);
+      sessionStorage.setItem("value5j", value5j);
+      sessionStorage.setItem("value5k", value5k);
+      sessionStorage.setItem("value5l", value5l);
+      sessionStorage.setItem("value5x", value5x); //5번팀 변수에 값 저장
+
+      sessionStorage.setItem("value6a", value6a);
+      sessionStorage.setItem("value6b", value6b);
+      sessionStorage.setItem("value6c", value6c);
+      sessionStorage.setItem("value6d", value6d);
+      sessionStorage.setItem("value6e", value6e);
+      sessionStorage.setItem("value6f", value6f);
+      sessionStorage.setItem("value6g", value6g);
+      sessionStorage.setItem("value6h", value6h);
+      sessionStorage.setItem("value6i", value6i);
+      sessionStorage.setItem("value6j", value6j);
+      sessionStorage.setItem("value6k", value6k);
+      sessionStorage.setItem("value6l", value6l);
+      sessionStorage.setItem("value6x", value6x); //6번팀 변수에 값 저장
+
+      sessionStorage.setItem("value7a", value7a);
+      sessionStorage.setItem("value7b", value7b);
+      sessionStorage.setItem("value7c", value7c);
+      sessionStorage.setItem("value7d", value7d);
+      sessionStorage.setItem("value7e", value7e);
+      sessionStorage.setItem("value7f", value7f);
+      sessionStorage.setItem("value7g", value7g);
+      sessionStorage.setItem("value7h", value7h);
+      sessionStorage.setItem("value7i", value7i);
+      sessionStorage.setItem("value7j", value7j);
+      sessionStorage.setItem("value7k", value7k);
+      sessionStorage.setItem("value7l", value7l);
+      sessionStorage.setItem("value7x", value7x); //7번팀 변수에 값 저장
+
+      sessionStorage.setItem("value8a", value8a);
+      sessionStorage.setItem("value8b", value8b);
+      sessionStorage.setItem("value8c", value8c);
+      sessionStorage.setItem("value8d", value8d);
+      sessionStorage.setItem("value8e", value8e);
+      sessionStorage.setItem("value8f", value8f);
+      sessionStorage.setItem("value8g", value8g);
+      sessionStorage.setItem("value8h", value8h);
+      sessionStorage.setItem("value8i", value8i);
+      sessionStorage.setItem("value8j", value8j);
+      sessionStorage.setItem("value8k", value8k);
+      sessionStorage.setItem("value8l", value8l);
+      sessionStorage.setItem("value8x", value8x); //8번팀 변수에 값 저장
+
+      sessionStorage.setItem("value9a", value9a);
+      sessionStorage.setItem("value9b", value9b);
+      sessionStorage.setItem("value9c", value9c);
+      sessionStorage.setItem("value9d", value9d);
+      sessionStorage.setItem("value9e", value9e);
+      sessionStorage.setItem("value9f", value9f);
+      sessionStorage.setItem("value9g", value9g);
+      sessionStorage.setItem("value9h", value9h);
+      sessionStorage.setItem("value9i", value9i);
+      sessionStorage.setItem("value9j", value9j);
+      sessionStorage.setItem("value9k", value9k);
+      sessionStorage.setItem("value9l", value9l);
+      sessionStorage.setItem("value9x", value9x); //9번팀 변수에 값 저장
+
+      sessionStorage.setItem("value10a", value10a);
+      sessionStorage.setItem("value10b", value10b);
+      sessionStorage.setItem("value10c", value10c);
+      sessionStorage.setItem("value10d", value10d);
+      sessionStorage.setItem("value10e", value10e);
+      sessionStorage.setItem("value10f", value10f);
+      sessionStorage.setItem("value10g", value10g);
+      sessionStorage.setItem("value10h", value10h);
+      sessionStorage.setItem("value10i", value10i);
+      sessionStorage.setItem("value10j", value10j);
+      sessionStorage.setItem("value10k", value10k);
+      sessionStorage.setItem("value10l", value10l);
+      sessionStorage.setItem("value10x", value10x); //10번팀 변수에 값 저장
+      
+  
+      alert("2010년 투자가 종료되었습니다.");
+    }
+  
+    
+   
+</script>
+    </body>
+</html>

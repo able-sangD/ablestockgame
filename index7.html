@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+   
+        <title>2009 자본금 확인</title>
+        <div>
+            <img src="에이블 로고.png" alt="에이블">
+          </div>
+          <style>
+            body {
+      background-image: url("2009.png"); /* 이미지 파일 경로 */
+      background-size: cover; /* 배경 이미지 크기 설정 */
+    }
+            img {
+        float: left;
+      }
+      h1 {
+            color : white;
+            text-align: center;
+            font-size: 5em;
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* 테두리 스타일 */
+            padding: 10px; /* 글자와 테두리 간격 */
+          } 
+
+      input[type="text"] {
+    text-align: center;
+   
+  }   
+  label {
+			display: block; /* 라벨 엘리먼트가 한 줄을 차지하도록 설정 */
+			margin-bottom: 5px; /* 라벨과 텍스트박스 사이의 간격 조정 */
+			font-size: 14px; /* 라벨의 폰트 크기 */
+			font-weight: bold; /* 라벨의 폰트 두께 */
+            text-align : center; 
+            display: inline-block; 
+            width: 60px; color : white; 
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+		}
+		input[type="text"] {
+			width: 120px; /* 텍스트박스의 가로 크기 */
+			height: 30px; /* 텍스트박스의 세로 크기 */
+			padding: 5px; /* 텍스트박스의 안쪽 여백 */
+			font-size: 15px; /* 텍스트박스의 폰트 크기 */
+			border: 1px solid #ccc; /* 텍스트박스의 테두리 스타일 */
+			border-radius: 4px; /* 텍스트박스의 테두리 모서리 둥글기 */
+			box-sizing: border-box; /* 텍스트박스의 너비와 높이에 안쪽 여백과 테두리 두께를 포함시키기 */
+            
+		}
+
+        form {
+        display: inline-block;
+        text-align: left;
+    }
+
+    div:first-of-type input {
+    background-color: rgb(65, 75, 189);
+    color : white;
+  }  
+
+  .next-page-btn {
+  background-color: #000000; /* 배경색 */
+  color: #ffffff; /* 글자색 */
+  border: none; /* 테두리 없애기 */
+  border-radius: 5px; /* 둥근 테두리 만들기 */
+  padding: 10px 20px; /* 버튼 내부 여백 */
+  font-size: 30px; /* 폰트 크기 */
+  cursor: pointer; /* 마우스 포인터 모양 변경 */
+  transition: all 0.3s ease; /* 호버 효과를 위한 애니메이션 속성 */
+  text-decoration: none;
+}
+
+.next-page-btn:hover {
+  background-color: #0069d9; /* 호버시 배경색 변경 */
+  color: #fff; /* 호버시 글자색 변경 */
+} 
+.button-container {
+      text-align: right;
+      margin-top: 20px;
+    }
+      </style>
+    </head>
+    
+    <body>
+        
+        <h1>2009년</h1>
+        
+        <button onclick="useValues()" style="background-color: rgb(0, 0, 0); color: white; border: none; width: 150px; height: 50px; font-size : 16px;">확인하기</button>
+        <button onclick="add()"style="background-color: rgb(0, 0, 0); color: white; border: none; width: 150px; height: 50px; font-size : 16px;">자본금 확인</button>
+        <button onclick="saveValues()" style="background-color: rgb(0, 0, 0); color: white; border: none; width: 150px; height: 50px;  font-size : 16px;">저장</button>s
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <form>
+
+            
+
+            <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="textbox1m">법인명</label>
+            <input type="text" id="textbox1m" name="textbox1m">
+            <label for="textbox2m">법인명</label>
+            <input type="text" id="textbox2m" name="textbox2m">
+            <label for="textbox3m">법인명</label>
+            <input type="text" id="textbox3m" name="textbox3m">
+            <label for="textbox4m">법인명</label>
+            <input type="text" id="textbox4m" name="textbox4m">
+            <label for="textbox5m">법인명</label>
+            <input type="text" id="textbox5m" name="textbox5m">
+            <label for="textbox6m">법인명</label>
+            <input type="text" id="textbox6m" name="textbox6m">
+            <label for="textbox7m">법인명</label>
+            <input type="text" id="textbox7m" name="textbox7m">
+            <label for="textbox8m">법인명</label>
+            <input type="text" id="textbox8m" name="textbox8m">
+            <label for="textbox9m">법인명</label>
+            <input type="text" id="textbox9m" name="textbox9m">
+            <label for="textbox10m">법인명</label>
+            <input type="text" id="textbox10m" name="textbox10m">
+        </div>
+
+        <br>
+
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="sum11">자본금</label>
+            <input type="text" id="sum11" name="sum11" readonly >
+            <label for="sum22">자본금</label>
+            <input type="text" id="sum22" name="sum22" readonly >
+            <label for="sum33">자본금</label>
+            <input type="text" id="sum33" name="sum33" readonly >
+            <label for="sum44">자본금</label>
+            <input type="text" id="sum44" name="sum44" readonly >
+            <label for="sum55">자본금</label>
+            <input type="text" id="sum55" name="sum55" readonly >
+            <label for="sum66">자본금</label>
+            <input type="text" id="sum66" name="sum66" readonly >
+            <label for="sum77">자본금</label>
+            <input type="text" id="sum77" name="sum77" readonly >
+            <label for="sum88">자본금</label>
+            <input type="text" id="sum88" name="sum88" readonly >
+            <label for="sum99">자본금</label>
+            <input type="text" id="sum99" name="sum99" readonly >
+            <label for="sum1010">자본금</label>
+            <input type="text" id="sum1010" name="sum1010" readonly >
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1aa">A기업</label>
+            <input type="text" id="text1aa" name="text1aa"value = "0" oninput="add()" >
+            <label for="text2aa">A기업</label>
+            <input type="text" id="text2aa" name="text2aa" value = "0" oninput="add()" >
+            <label for="text3aa">A기업</label>
+            <input type="text" id="text3aa" name="text3aa" value = "0" oninput="add()" >
+            <label for="text4aa">A기업</label>
+            <input type="text" id="text4aa" name="text4aa" value = "0" oninput="add()" >
+            <label for="text5aa">A기업</label>
+            <input type="text" id="text5aa" name="text5aa" value = "0" oninput="add()" >
+            <label for="text6aa">A기업</label>
+            <input type="text" id="text6aa" name="text6aa" value = "0" oninput="add()" >
+            <label for="text7aa">A기업</label>
+            <input type="text" id="text7aa" name="text7aa" value = "0" oninput="add()" >
+            <label for="text8aa">A기업</label>
+            <input type="text" id="text8aa" name="text8aa" value = "0" oninput="add()" >
+            <label for="text9aa">A기업</label>
+            <input type="text" id="text9aa" name="text9aa" value = "0" oninput="add()" >
+            <label for="text10aa">A기업</label>
+            <input type="text" id="text10aa" name="text10aa" value = "0" oninput="add()" >
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1bb">B기업</label>
+            <input type="text" id="text1bb" name="text1bb"value = "0" oninput="add()" >
+            <label for="text2bb">B기업</label>
+            <input type="text" id="text2bb" name="text2bb" value = "0" oninput="add()">
+            <label for="text3bb">B기업</label>
+            <input type="text" id="text3bb" name="text3bb" value = "0" oninput="add()">
+            <label for="text4bb">B기업</label>
+            <input type="text" id="text4bb" name="text4bb" value = "0" oninput="add()">
+            <label for="text5bb">B기업</label>
+            <input type="text" id="text5bb" name="text5bb" value = "0" oninput="add()">
+            <label for="text6bb">B기업</label>
+            <input type="text" id="text6bb" name="text6bb" value = "0" oninput="add()">
+            <label for="text7bb">B기업</label>
+            <input type="text" id="text7bb" name="text7bb" value = "0" oninput="add()">
+            <label for="text8bb">B기업</label>
+            <input type="text" id="text8bb" name="text8bb" value = "0" oninput="add()">
+            <label for="text9bb">B기업</label>
+            <input type="text" id="text9bb" name="text9bb" value = "0" oninput="add()">
+            <label for="text10bb">B기업</label>
+            <input type="text" id="text10bb" name="text10bb" value = "0" oninput="add()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1cc">C기업</label>
+            <input type="text" id="text1cc" name="text1cc"value = "0" oninput="add()" >
+            <label for="text2cc">C기업</label>
+            <input type="text" id="text2cc" name="text2cc" value = "0" oninput="add()">
+            <label for="text3cc">C기업</label>
+            <input type="text" id="text3cc" name="text3cc" value = "0" oninput="add()">
+            <label for="text4cc">C기업</label>
+            <input type="text" id="text4cc" name="text4cc" value = "0" oninput="add()">
+            <label for="text5cc">C기업</label>
+            <input type="text" id="text5cc" name="text5cc" value = "0" oninput="add()">
+            <label for="text6cc">C기업</label>
+            <input type="text" id="text6cc" name="text6cc" value = "0" oninput="add()">
+            <label for="text7cc">C기업</label>
+            <input type="text" id="text7cc" name="text7cc" value = "0" oninput="add()">
+            <label for="text8cc">C기업</label>
+            <input type="text" id="text8cc" name="text8cc" value = "0" oninput="add()">
+            <label for="text9cc">C기업</label>
+            <input type="text" id="text9cc" name="text9cc" value = "0" oninput="add()">
+            <label for="text10cc">C기업</label>
+            <input type="text" id="text10cc" name="text10cc" value = "0" oninput="add()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1dd">D기업</label>
+            <input type="text" id="text1dd" name="text1dd"value = "0" oninput="add()" >
+            <label for="text2dd">D기업</label>
+            <input type="text" id="text2dd" name="text2dd" value = "0" oninput="add()">
+            <label for="text3dd">D기업</label>
+            <input type="text" id="text3dd" name="text3dd" value = "0" oninput="add()">
+            <label for="text4dd">D기업</label>
+            <input type="text" id="text4dd" name="text4dd" value = "0" oninput="add()">
+            <label for="text5dd">D기업</label>
+            <input type="text" id="text5dd" name="text5dd" value = "0" oninput="add()">
+            <label for="text6dd">D기업</label>
+            <input type="text" id="text6dd" name="text6dd" value = "0" oninput="add()">
+            <label for="text7dd">D기업</label>
+            <input type="text" id="text7dd" name="text7dd" value = "0" oninput="add()">
+            <label for="text8dd">D기업</label>
+            <input type="text" id="text8dd" name="text8dd" value = "0" oninput="add()">
+            <label for="text9dd">D기업</label>
+            <input type="text" id="text9dd" name="text9dd" value = "0" oninput="add()">
+            <label for="text10dd">D기업</label>
+            <input type="text" id="text10dd" name="text10dd" value = "0" oninput="add()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1ee">E기업</label>
+            <input type="text" id="text1ee" name="text1ee"value = "0" oninput="add()" >
+            <label for="text2ee">E기업</label>
+            <input type="text" id="text2ee" name="text2ee" value = "0" oninput="add()">
+            <label for="text3ee">E기업</label>
+            <input type="text" id="text3ee" name="text3ee" value = "0" oninput="add()">
+            <label for="text4ee">E기업</label>
+            <input type="text" id="text4ee" name="text4ee" value = "0" oninput="add()">
+            <label for="text5ee">E기업</label>
+            <input type="text" id="text5ee" name="text5ee" value = "0" oninput="add()">
+            <label for="text6ee">E기업</label>
+            <input type="text" id="text6ee" name="text6ee" value = "0" oninput="add()">
+            <label for="text7ee">E기업</label>
+            <input type="text" id="text7ee" name="text7ee" value = "0" oninput="add()">
+            <label for="text8ee">E기업</label>
+            <input type="text" id="text8ee" name="text8ee" value = "0" oninput="add()">
+            <label for="text9ee">E기업</label>
+            <input type="text" id="text9ee" name="text9ee" value = "0" oninput="add()">
+            <label for="text10ee">E기업</label>
+            <input type="text" id="text10ee" name="text10ee" value = "0" oninput="add()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1ff">F기업</label>
+            <input type="text" id="text1ff" name="text1ff"value = "0" oninput="add()" >
+            <label for="text2ff">F기업</label>
+            <input type="text" id="text2ff" name="text2ff" value = "0" oninput="add()">
+            <label for="text3ff">F기업</label>
+            <input type="text" id="text3ff" name="text3ff" value = "0" oninput="add()">
+            <label for="text4ff">F기업</label>
+            <input type="text" id="text4ff" name="text4ff" value = "0" oninput="add()">
+            <label for="text5ff">F기업</label>
+            <input type="text" id="text5ff" name="text5ff" value = "0" oninput="add()">
+            <label for="text6ff">F기업</label>
+            <input type="text" id="text6ff" name="text6ff" value = "0" oninput="add()">
+            <label for="text7ff">F기업</label>
+            <input type="text" id="text7ff" name="text7ff" value = "0" oninput="add()">
+            <label for="text8ff">F기업</label>
+            <input type="text" id="text8ff" name="text8ff" value = "0" oninput="add()">
+            <label for="text9ff">F기업</label>
+            <input type="text" id="text9ff" name="text9ff" value = "0" oninput="add()">
+            <label for="text10ff">F기업</label>
+            <input type="text" id="text10ff" name="text10ff" value = "0" oninput="add()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1gg">G기업</label>
+            <input type="text" id="text1gg" name="text1gg"value = "0" oninput="add()" >
+            <label for="text2gg">G기업</label>
+            <input type="text" id="text2gg" name="text2gg" value = "0" oninput="add()">
+            <label for="text3gg">G기업</label>
+            <input type="text" id="text3gg" name="text3gg" value = "0" oninput="add()">
+            <label for="text4gg">G기업</label>
+            <input type="text" id="text4gg" name="text4gg" value = "0" oninput="add()">
+            <label for="text5gg">G기업</label>
+            <input type="text" id="text5gg" name="text5gg" value = "0" oninput="add()">
+            <label for="text6gg">G기업</label>
+            <input type="text" id="text6gg" name="text6gg" value = "0" oninput="add()">
+            <label for="text7gg">G기업</label>
+            <input type="text" id="text7gg" name="text7gg" value = "0" oninput="add()">
+            <label for="text8gg">G기업</label>
+            <input type="text" id="text8gg" name="text8gg" value = "0" oninput="add()">
+            <label for="text9gg">G기업</label>
+            <input type="text" id="text9gg" name="text9gg" value = "0" oninput="add()">
+            <label for="text10gg">G기업</label>
+            <input type="text" id="text10gg" name="text10gg" value = "0" oninput="add()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1hh">H기업</label>
+            <input type="text" id="text1hh" name="text1hh"value = "0" oninput="add()" >
+            <label for="text2hh">H기업</label>
+            <input type="text" id="text2hh" name="text2hh" value = "0" oninput="add()">
+            <label for="text3hh">H기업</label>
+            <input type="text" id="text3hh" name="text3hh" value = "0" oninput="add()">
+            <label for="text4hh">H기업</label>
+            <input type="text" id="text4hh" name="text4hh" value = "0" oninput="add()">
+            <label for="text5hh">H기업</label>
+            <input type="text" id="text5hh" name="text5hh" value = "0" oninput="add()">
+            <label for="text6hh">H기업</label>
+            <input type="text" id="text6hh" name="text6hh" value = "0" oninput="add()">
+            <label for="text7hh">H기업</label>
+            <input type="text" id="text7hh" name="text7hh" value = "0" oninput="add()">
+            <label for="text8hh">H기업</label>
+            <input type="text" id="text8hh" name="text8hh" value = "0" oninput="add()">
+            <label for="text9hh">H기업</label>
+            <input type="text" id="text9hh" name="text9hh" value = "0" oninput="add()">
+            <label for="text10hh">H기업</label>
+            <input type="text" id="text10hh" name="text10hh" value = "0" oninput="add()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1ii">I기업</label>
+            <input type="text" id="text1ii" name="text1ii"value = "0" oninput="add()" >
+            <label for="text2ii">I기업</label>
+            <input type="text" id="text2ii" name="text2ii" value = "0" oninput="add()">
+            <label for="text3ii">I기업</label>
+            <input type="text" id="text3ii" name="text3ii" value = "0" oninput="add()">
+            <label for="text4ii">I기업</label>
+            <input type="text" id="text4ii" name="text4ii" value = "0" oninput="add()">
+            <label for="text5ii">I기업</label>
+            <input type="text" id="text5ii" name="text5ii" value = "0" oninput="add()">
+            <label for="text6ii">I기업</label>
+            <input type="text" id="text6ii" name="text6ii" value = "0" oninput="add()">
+            <label for="text7ii">I기업</label>
+            <input type="text" id="text7ii" name="text7ii" value = "0" oninput="add()">
+            <label for="text8ii">I기업</label>
+            <input type="text" id="text8ii" name="text8ii" value = "0" oninput="add()">
+            <label for="text9ii">I기업</label>
+            <input type="text" id="text9ii" name="text9ii" value = "0" oninput="add()">
+            <label for="text10ii">I기업</label>
+            <input type="text" id="text10ii" name="text10ii" value = "0" oninput="add()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1jj">J기업</label>
+            <input type="text" id="text1jj" name="text1jj"value = "0" oninput="add()" >
+            <label for="text2jj">J기업</label>
+            <input type="text" id="text2jj" name="text2jj" value = "0" oninput="add()">
+            <label for="text3jj">J기업</label>
+            <input type="text" id="text3jj" name="text3jj" value = "0" oninput="add()">
+            <label for="text4jj">J기업</label>
+            <input type="text" id="text4jj" name="text4jj" value = "0" oninput="add()">
+            <label for="text5jj">J기업</label>
+            <input type="text" id="text5jj" name="text5jj" value = "0" oninput="add()">
+            <label for="text6jj">J기업</label>
+            <input type="text" id="text6jj" name="text6jj" value = "0" oninput="add()">
+            <label for="text7jj">J기업</label>
+            <input type="text" id="text7jj" name="text7jj" value = "0" oninput="add()">
+            <label for="text8jj">J기업</label>
+            <input type="text" id="text8jj" name="text8jj" value = "0" oninput="add()">
+            <label for="text9jj">J기업</label>
+            <input type="text" id="text9jj" name="text9jj" value = "0" oninput="add()">
+            <label for="text10jj">J기업</label>
+            <input type="text" id="text10jj" name="text10jj" value = "0" oninput="add()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1kk">K기업</label>
+            <input type="text" id="text1kk" name="text1kk"value = "0" oninput="add()" >
+            <label for="text2kk">K기업</label>
+            <input type="text" id="text2kk" name="text2kk" value = "0" oninput="add()">
+            <label for="text3kk">K기업</label>
+            <input type="text" id="text3kk" name="text3kk" value = "0" oninput="add()">
+            <label for="text4kk">K기업</label>
+            <input type="text" id="text4kk" name="text4kk" value = "0" oninput="add()">
+            <label for="text5kk">K기업</label>
+            <input type="text" id="text5kk" name="text5kk" value = "0" oninput="add()">
+            <label for="text6kk">K기업</label>
+            <input type="text" id="text6kk" name="text6kk" value = "0" oninput="add()">
+            <label for="text7kk">K기업</label>
+            <input type="text" id="text7kk" name="text7kk" value = "0" oninput="add()">
+            <label for="text8kk">K기업</label>
+            <input type="text" id="text8kk" name="text8kk" value = "0" oninput="add()">
+            <label for="text9kk">K기업</label>
+            <input type="text" id="text9kk" name="text9kk" value = "0" oninput="add()">
+            <label for="text10kk">K기업</label>
+            <input type="text" id="text10kk" name="text10kk" value = "0" oninput="add()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1ll">L기업</label>
+            <input type="text" id="text1ll" name="text1ll"value = "0" oninput="add()" >
+            <label for="text2ll">L기업</label>
+            <input type="text" id="text2ll" name="text2ll" value = "0" oninput="add()">
+            <label for="text3ll">L기업</label>
+            <input type="text" id="text3ll" name="text3ll" value = "0" oninput="add()">
+            <label for="text4ll">L기업</label>
+            <input type="text" id="text4ll" name="text4ll" value = "0" oninput="add()">
+            <label for="text5ll">L기업</label>
+            <input type="text" id="text5ll" name="text5ll" value = "0" oninput="add()">
+            <label for="text6ll">L기업</label>
+            <input type="text" id="text6ll" name="text6ll" value = "0" oninput="add()">
+            <label for="text7ll">L기업</label>
+            <input type="text" id="text7ll" name="text7ll" value = "0" oninput="add()">
+            <label for="text8ll">L기업</label>
+            <input type="text" id="text8ll" name="text8ll" value = "0" oninput="add()">
+            <label for="text9ll">L기업</label>
+            <input type="text" id="text9ll" name="text9ll" value = "0" oninput="add()">
+            <label for="text10ll">L기업</label>
+            <input type="text" id="text10ll" name="text10ll" value = "0" oninput="add()">
+        </div>
+
+        <br>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+            
+            <label for="text1xx">투자X</label>
+            <input type="text" id="text1xx" name="text1xx"value = "0" oninput="add()" >
+            <label for="text2xx">투자X</label>
+            <input type="text" id="text2xx" name="text2xx" value = "0" oninput="add()">
+            <label for="text3xx">투자X</label>
+            <input type="text" id="text3xx" name="text3xx" value = "0" oninput="add()">
+            <label for="text4xx">투자X</label>
+            <input type="text" id="text4xx" name="text4xx" value = "0" oninput="add()">
+            <label for="text5xx">투자X</label>
+            <input type="text" id="text5xx" name="text5xx" value = "0" oninput="add()">
+            <label for="text6xx">투자X</label>
+            <input type="text" id="text6xx" name="text6xx" value = "0" oninput="add()">
+            <label for="text7xx">투자X</label>
+            <input type="text" id="text7xx" name="text7xx" value = "0" oninput="add()">
+            <label for="text8xx">투자X</label>
+            <input type="text" id="text8xx" name="text8xx" value = "0" oninput="add()">
+            <label for="text9xx">투자X</label>
+            <input type="text" id="text9xx" name="text9xx" value = "0" oninput="add()">
+            <label for="text10xx">투자X</label>
+            <input type="text" id="text10xx" name="text10xx" value = "0" oninput="add()">
+        </div>
+        </form>
+        
+        <div class="button-container" >
+            <a href="index8.html" class="next-page-btn">다음</a>
+          </div>
+
+         
+        
+       <script>
+
+
+window.onload = function() {
+  const maxLength = 0; // 최대 소수점 자릿수
+  const inputs = document.querySelectorAll("input[type='text']");
+  inputs.forEach(input => {
+    input.addEventListener("input", function() {
+      const parts = this.value.split(".");
+      if (parts.length === 2) {
+        // 소수점이 존재하는 경우
+        const integerPart = parts[0];
+        let decimalPart = parts[1];
+        if (decimalPart.length > maxLength) {
+          decimalPart = decimalPart.substring(0, maxLength);
+        }
+        this.value = `${integerPart}.${decimalPart}`;
+      }
+    });
+  });
+};
+
+function truncateInput(input) {
+  const maxLength = 2; // 최대 소수점 자릿수
+  input.value = truncateDecimal(input.value, maxLength);
+}
+
+
+
+        function saveValues() {
+      // 각 텍스트 박스의 값을 변수에 저장합니다.
+      var value1ca = document.getElementById("sum11").value;
+      var value2ca = document.getElementById("sum22").value;
+      var value3ca = document.getElementById("sum33").value;
+      var value4ca = document.getElementById("sum44").value;
+      var value5ca = document.getElementById("sum55").value;
+      var value6ca = document.getElementById("sum66").value;
+      var value7ca = document.getElementById("sum77").value;
+      var value8ca = document.getElementById("sum88").value;
+      var value9ca = document.getElementById("sum99").value;
+      var value10ca = document.getElementById("sum1010").value;
+  
+      // 변수에 저장된 값을 다른 페이지에서 사용할 수 있도록 저장합니다.
+      sessionStorage.setItem("value1ca", value1ca);
+      sessionStorage.setItem("value2ca", value2ca);
+      sessionStorage.setItem("value3ca", value3ca);
+      sessionStorage.setItem("value4ca", value4ca);
+      sessionStorage.setItem("value5ca", value5ca);
+      sessionStorage.setItem("value6ca", value6ca);
+      sessionStorage.setItem("value7ca", value7ca);
+      sessionStorage.setItem("value8ca", value8ca);
+      sessionStorage.setItem("value9ca", value9ca);
+      sessionStorage.setItem("value10ca", value10ca);
+  
+      alert("저장완료");
+    }
+
+
+function add() {
+    if (add.hasRun) {
+    return;
+  }
+    var num1a = parseFloat(document.getElementById("text1aa").value);
+  var num1b = parseFloat(document.getElementById("text1bb").value);
+  var num1c = parseFloat(document.getElementById("text1cc").value);
+  var num1d = parseFloat(document.getElementById("text1dd").value);
+  var num1e = parseFloat(document.getElementById("text1ee").value);
+  var num1f = parseFloat(document.getElementById("text1ff").value);
+  var num1g = parseFloat(document.getElementById("text1gg").value);
+  var num1h = parseFloat(document.getElementById("text1hh").value);
+  var num1i = parseFloat(document.getElementById("text1ii").value);
+  var num1j = parseFloat(document.getElementById("text1jj").value);
+  var num1k = parseFloat(document.getElementById("text1kk").value);
+  var num1l = parseFloat(document.getElementById("text1ll").value);
+  var num1x = parseFloat(document.getElementById("text1xx").value);
+  var sum1 = num1a + num1b + num1c + num1d + num1e + num1f + num1g + num1h + num1i + num1j + num1k + num1l + num1x;
+  document.getElementById("sum11").value = sum1;
+
+  var num2a = parseFloat(document.getElementById("text2aa").value);
+  var num2b = parseFloat(document.getElementById("text2bb").value);
+  var num2c = parseFloat(document.getElementById("text2cc").value);
+  var num2d = parseFloat(document.getElementById("text2dd").value);
+  var num2e = parseFloat(document.getElementById("text2ee").value);
+  var num2f = parseFloat(document.getElementById("text2ff").value);
+  var num2g = parseFloat(document.getElementById("text2gg").value);
+  var num2h = parseFloat(document.getElementById("text2hh").value);
+  var num2i = parseFloat(document.getElementById("text2ii").value);
+  var num2j = parseFloat(document.getElementById("text2jj").value);
+  var num2k = parseFloat(document.getElementById("text2kk").value);
+  var num2l = parseFloat(document.getElementById("text2ll").value);
+  var num2x = parseFloat(document.getElementById("text2xx").value);
+  var sum2 = num2a + num2b + num2c + num2d + num2e + num2f + num2g + num2h + num2i + num2j + num2k + num2l + num2x;
+  document.getElementById("sum22").value = sum2;
+
+  var num3a = parseFloat(document.getElementById("text3aa").value);
+  var num3b = parseFloat(document.getElementById("text3bb").value);
+  var num3c = parseFloat(document.getElementById("text3cc").value);
+  var num3d = parseFloat(document.getElementById("text3dd").value);
+  var num3e = parseFloat(document.getElementById("text3ee").value);
+  var num3f = parseFloat(document.getElementById("text3ff").value);
+  var num3g = parseFloat(document.getElementById("text3gg").value);
+  var num3h = parseFloat(document.getElementById("text3hh").value);
+  var num3i = parseFloat(document.getElementById("text3ii").value);
+  var num3j = parseFloat(document.getElementById("text3jj").value);
+  var num3k = parseFloat(document.getElementById("text3kk").value);
+  var num3l = parseFloat(document.getElementById("text3ll").value);
+  var num3x = parseFloat(document.getElementById("text3xx").value);
+  var sum3 = num3a + num3b + num3c + num3d + num3e + num3f + num3g + num3h + num3i + num3j + num3k + num3l + num3x;
+  document.getElementById("sum33").value = sum3;
+
+  var num4a = parseFloat(document.getElementById("text4aa").value);
+  var num4b = parseFloat(document.getElementById("text4bb").value);
+  var num4c = parseFloat(document.getElementById("text4cc").value);
+  var num4d = parseFloat(document.getElementById("text4dd").value);
+  var num4e = parseFloat(document.getElementById("text4ee").value);
+  var num4f = parseFloat(document.getElementById("text4ff").value);
+  var num4g = parseFloat(document.getElementById("text4gg").value);
+  var num4h = parseFloat(document.getElementById("text4hh").value);
+  var num4i = parseFloat(document.getElementById("text4ii").value);
+  var num4j = parseFloat(document.getElementById("text4jj").value);
+  var num4k = parseFloat(document.getElementById("text4kk").value);
+  var num4l = parseFloat(document.getElementById("text4ll").value);
+  var num4x = parseFloat(document.getElementById("text4xx").value);
+  var sum4 = num4a + num4b + num4c + num4d + num4e + num4f + num4g + num4h + num4i + num4j + num4k + num4l + num4x;
+  document.getElementById("sum44").value = sum4;
+
+  var num5a = parseFloat(document.getElementById("text5aa").value);
+  var num5b = parseFloat(document.getElementById("text5bb").value);
+  var num5c = parseFloat(document.getElementById("text5cc").value);
+  var num5d = parseFloat(document.getElementById("text5dd").value);
+  var num5e = parseFloat(document.getElementById("text5ee").value);
+  var num5f = parseFloat(document.getElementById("text5ff").value);
+  var num5g = parseFloat(document.getElementById("text5gg").value);
+  var num5h = parseFloat(document.getElementById("text5hh").value);
+  var num5i = parseFloat(document.getElementById("text5ii").value);
+  var num5j = parseFloat(document.getElementById("text5jj").value);
+  var num5k = parseFloat(document.getElementById("text5kk").value);
+  var num5l = parseFloat(document.getElementById("text5ll").value);
+  var num5x = parseFloat(document.getElementById("text5xx").value);
+  var sum5 = num5a + num5b + num5c + num5d + num5e + num5f + num5g + num5h + num5i + num5j + num5k + num5l + num5x;
+  document.getElementById("sum55").value = sum5;
+
+  var num6a = parseFloat(document.getElementById("text6aa").value);
+  var num6b = parseFloat(document.getElementById("text6bb").value);
+  var num6c = parseFloat(document.getElementById("text6cc").value);
+  var num6d = parseFloat(document.getElementById("text6dd").value);
+  var num6e = parseFloat(document.getElementById("text6ee").value);
+  var num6f = parseFloat(document.getElementById("text6ff").value);
+  var num6g = parseFloat(document.getElementById("text6gg").value);
+  var num6h = parseFloat(document.getElementById("text6hh").value);
+  var num6i = parseFloat(document.getElementById("text6ii").value);
+  var num6j = parseFloat(document.getElementById("text6jj").value);
+  var num6k = parseFloat(document.getElementById("text6kk").value);
+  var num6l = parseFloat(document.getElementById("text6ll").value);
+  var num6x = parseFloat(document.getElementById("text6xx").value);
+  var sum6 = num6a + num6b + num6c + num6d + num6e + num6f + num6g + num6h + num6i + num6j + num6k + num6l + num6x;
+  document.getElementById("sum66").value = sum6;
+
+  var num7a = parseFloat(document.getElementById("text7aa").value);
+  var num7b = parseFloat(document.getElementById("text7bb").value);
+  var num7c = parseFloat(document.getElementById("text7cc").value);
+  var num7d = parseFloat(document.getElementById("text7dd").value);
+  var num7e = parseFloat(document.getElementById("text7ee").value);
+  var num7f = parseFloat(document.getElementById("text7ff").value);
+  var num7g = parseFloat(document.getElementById("text7gg").value);
+  var num7h = parseFloat(document.getElementById("text7hh").value);
+  var num7i = parseFloat(document.getElementById("text7ii").value);
+  var num7j = parseFloat(document.getElementById("text7jj").value);
+  var num7k = parseFloat(document.getElementById("text7kk").value);
+  var num7l = parseFloat(document.getElementById("text7ll").value);
+  var num7x = parseFloat(document.getElementById("text7xx").value);
+  var sum7 = num7a + num7b + num7c + num7d + num7e + num7f + num7g + num7h + num7i + num7j + num7k + num7l + num7x;
+  document.getElementById("sum77").value = sum7;
+
+  var num8a = parseFloat(document.getElementById("text8aa").value);
+  var num8b = parseFloat(document.getElementById("text8bb").value);
+  var num8c = parseFloat(document.getElementById("text8cc").value);
+  var num8d = parseFloat(document.getElementById("text8dd").value);
+  var num8e = parseFloat(document.getElementById("text8ee").value);
+  var num8f = parseFloat(document.getElementById("text8ff").value);
+  var num8g = parseFloat(document.getElementById("text8gg").value);
+  var num8h = parseFloat(document.getElementById("text8hh").value);
+  var num8i = parseFloat(document.getElementById("text8ii").value);
+  var num8j = parseFloat(document.getElementById("text8jj").value);
+  var num8k = parseFloat(document.getElementById("text8kk").value);
+  var num8l = parseFloat(document.getElementById("text8ll").value);
+  var num8x = parseFloat(document.getElementById("text8xx").value);
+  var sum8 = num8a + num8b + num8c + num8d + num8e + num8f + num8g + num8h + num8i + num8j + num8k + num8l + num8x;
+  document.getElementById("sum88").value = sum8;
+
+
+  var num9a = parseFloat(document.getElementById("text9aa").value);
+  var num9b = parseFloat(document.getElementById("text9bb").value);
+  var num9c = parseFloat(document.getElementById("text9cc").value);
+  var num9d = parseFloat(document.getElementById("text9dd").value);
+  var num9e = parseFloat(document.getElementById("text9ee").value);
+  var num9f = parseFloat(document.getElementById("text9ff").value);
+  var num9g = parseFloat(document.getElementById("text9gg").value);
+  var num9h = parseFloat(document.getElementById("text9hh").value);
+  var num9i = parseFloat(document.getElementById("text9ii").value);
+  var num9j = parseFloat(document.getElementById("text9jj").value);
+  var num9k = parseFloat(document.getElementById("text9kk").value);
+  var num9l = parseFloat(document.getElementById("text9ll").value);
+  var num9x = parseFloat(document.getElementById("text9xx").value);
+  var sum9 = num9a + num9b + num9c + num9d + num9e + num9f + num9g + num9h + num9i + num9j + num9k + num9l + num9x;
+  document.getElementById("sum99").value = sum9;
+
+
+  var num10a = parseFloat(document.getElementById("text10aa").value);
+  var num10b = parseFloat(document.getElementById("text10bb").value);
+  var num10c = parseFloat(document.getElementById("text10cc").value);
+  var num10d = parseFloat(document.getElementById("text10dd").value);
+  var num10e = parseFloat(document.getElementById("text10ee").value);
+  var num10f = parseFloat(document.getElementById("text10ff").value);
+  var num10g = parseFloat(document.getElementById("text10gg").value);
+  var num10h = parseFloat(document.getElementById("text10hh").value);
+  var num10i = parseFloat(document.getElementById("text10ii").value);
+  var num10j = parseFloat(document.getElementById("text10jj").value);
+  var num10k = parseFloat(document.getElementById("text10kk").value);
+  var num10l = parseFloat(document.getElementById("text10ll").value);
+  var num10x = parseFloat(document.getElementById("text10xx").value);
+  var sum10 = num10a + num10b + num10c + num10d + num10e + num10f + num10g + num10h + num10i + num10j + num10k + num10l + num10x;
+  document.getElementById("sum1010").value = sum10;
+
+  add.hasRun = true;
+
+  }
+  
+
+
+
+           function useValues() {
+    // 저장된 값을 가져와 변수에 저장합니다.
+    var value1 = sessionStorage.getItem("value1");
+    var value2 = sessionStorage.getItem("value2");
+    var value3 = sessionStorage.getItem("value3");
+    var value4 = sessionStorage.getItem("value4");
+    var value5 = sessionStorage.getItem("value5");
+    var value6 = sessionStorage.getItem("value6");
+    var value7 = sessionStorage.getItem("value7");
+    var value8 = sessionStorage.getItem("value8");
+    var value9 = sessionStorage.getItem("value9");
+    var value10 = sessionStorage.getItem("value10");
+
+    var value1a = sessionStorage.getItem("value1a");
+    var value2a = sessionStorage.getItem("value2a");
+    var value3a = sessionStorage.getItem("value3a");
+    var value4a = sessionStorage.getItem("value4a");
+    var value5a = sessionStorage.getItem("value5a");
+    var value6a = sessionStorage.getItem("value6a");
+    var value7a = sessionStorage.getItem("value7a");
+    var value8a = sessionStorage.getItem("value8a");
+    var value9a = sessionStorage.getItem("value9a");
+    var value10a = sessionStorage.getItem("value10a");
+
+    var value1b = sessionStorage.getItem("value1b");
+    var value2b = sessionStorage.getItem("value2b");
+    var value3b = sessionStorage.getItem("value3b");
+    var value4b = sessionStorage.getItem("value4b");
+    var value5b = sessionStorage.getItem("value5b");
+    var value6b = sessionStorage.getItem("value6b");
+    var value7b = sessionStorage.getItem("value7b");
+    var value8b = sessionStorage.getItem("value8b");
+    var value9b = sessionStorage.getItem("value9b");
+    var value10b = sessionStorage.getItem("value10b");
+
+    var value1c = sessionStorage.getItem("value1c");
+    var value2c = sessionStorage.getItem("value2c");
+    var value3c = sessionStorage.getItem("value3c");
+    var value4c = sessionStorage.getItem("value4c");
+    var value5c = sessionStorage.getItem("value5c");
+    var value6c = sessionStorage.getItem("value6c");
+    var value7c = sessionStorage.getItem("value7c");
+    var value8c = sessionStorage.getItem("value8c");
+    var value9c = sessionStorage.getItem("value9c");
+    var value10c = sessionStorage.getItem("value10c");
+
+    var value1d = sessionStorage.getItem("value1d");
+    var value2d = sessionStorage.getItem("value2d");
+    var value3d = sessionStorage.getItem("value3d");
+    var value4d = sessionStorage.getItem("value4d");
+    var value5d = sessionStorage.getItem("value5d");
+    var value6d = sessionStorage.getItem("value6d");
+    var value7d = sessionStorage.getItem("value7d");
+    var value8d = sessionStorage.getItem("value8d");
+    var value9d = sessionStorage.getItem("value9d");
+    var value10d = sessionStorage.getItem("value10d");
+
+    var value1e = sessionStorage.getItem("value1e");
+    var value2e = sessionStorage.getItem("value2e");
+    var value3e = sessionStorage.getItem("value3e");
+    var value4e = sessionStorage.getItem("value4e");
+    var value5e = sessionStorage.getItem("value5e");
+    var value6e = sessionStorage.getItem("value6e");
+    var value7e = sessionStorage.getItem("value7e");
+    var value8e = sessionStorage.getItem("value8e");
+    var value9e = sessionStorage.getItem("value9e");
+    var value10e = sessionStorage.getItem("value10e");
+
+    var value1f = sessionStorage.getItem("value1f");
+    var value2f = sessionStorage.getItem("value2f");
+    var value3f = sessionStorage.getItem("value3f");
+    var value4f = sessionStorage.getItem("value4f");
+    var value5f = sessionStorage.getItem("value5f");
+    var value6f = sessionStorage.getItem("value6f");
+    var value7f = sessionStorage.getItem("value7f");
+    var value8f = sessionStorage.getItem("value8f");
+    var value9f = sessionStorage.getItem("value9f");
+    var value10f = sessionStorage.getItem("value10f");
+
+    var value1g = sessionStorage.getItem("value1g");
+    var value2g = sessionStorage.getItem("value2g");
+    var value3g = sessionStorage.getItem("value3g");
+    var value4g = sessionStorage.getItem("value4g");
+    var value5g = sessionStorage.getItem("value5g");
+    var value6g = sessionStorage.getItem("value6g");
+    var value7g = sessionStorage.getItem("value7g");
+    var value8g = sessionStorage.getItem("value8g");
+    var value9g = sessionStorage.getItem("value9g");
+    var value10g = sessionStorage.getItem("value10g");
+
+    var value1h = sessionStorage.getItem("value1h");
+    var value2h = sessionStorage.getItem("value2h");
+    var value3h = sessionStorage.getItem("value3h");
+    var value4h = sessionStorage.getItem("value4h");
+    var value5h = sessionStorage.getItem("value5h");
+    var value6h = sessionStorage.getItem("value6h");
+    var value7h = sessionStorage.getItem("value7h");
+    var value8h = sessionStorage.getItem("value8h");
+    var value9h = sessionStorage.getItem("value9h");
+    var value10h = sessionStorage.getItem("value10h");
+
+    var value1i = sessionStorage.getItem("value1i");
+    var value2i = sessionStorage.getItem("value2i");
+    var value3i = sessionStorage.getItem("value3i");
+    var value4i = sessionStorage.getItem("value4i");
+    var value5i = sessionStorage.getItem("value5i");
+    var value6i = sessionStorage.getItem("value6i");
+    var value7i = sessionStorage.getItem("value7i");
+    var value8i = sessionStorage.getItem("value8i");
+    var value9i = sessionStorage.getItem("value9i");
+    var value10i = sessionStorage.getItem("value10i");
+
+    var value1j = sessionStorage.getItem("value1j");
+    var value2j = sessionStorage.getItem("value2j");
+    var value3j = sessionStorage.getItem("value3j");
+    var value4j = sessionStorage.getItem("value4j");
+    var value5j = sessionStorage.getItem("value5j");
+    var value6j = sessionStorage.getItem("value6j");
+    var value7j = sessionStorage.getItem("value7j");
+    var value8j = sessionStorage.getItem("value8j");
+    var value9j = sessionStorage.getItem("value9j");
+    var value10j = sessionStorage.getItem("value10j");
+
+    var value1k = sessionStorage.getItem("value1k");
+    var value2k = sessionStorage.getItem("value2k");
+    var value3k = sessionStorage.getItem("value3k");
+    var value4k = sessionStorage.getItem("value4k");
+    var value5k = sessionStorage.getItem("value5k");
+    var value6k = sessionStorage.getItem("value6k");
+    var value7k = sessionStorage.getItem("value7k");
+    var value8k = sessionStorage.getItem("value8k");
+    var value9k = sessionStorage.getItem("value9k");
+    var value10k = sessionStorage.getItem("value10k");
+
+    var value1l = sessionStorage.getItem("value1l");
+    var value2l = sessionStorage.getItem("value2l");
+    var value3l = sessionStorage.getItem("value3l");
+    var value4l = sessionStorage.getItem("value4l");
+    var value5l = sessionStorage.getItem("value5l");
+    var value6l = sessionStorage.getItem("value6l");
+    var value7l = sessionStorage.getItem("value7l");
+    var value8l = sessionStorage.getItem("value8l");
+    var value9l = sessionStorage.getItem("value9l");
+    var value10l = sessionStorage.getItem("value10l");
+
+    var value1x = sessionStorage.getItem("value1x");
+    var value2x = sessionStorage.getItem("value2x");
+    var value3x = sessionStorage.getItem("value3x");
+    var value4x = sessionStorage.getItem("value4x");
+    var value5x = sessionStorage.getItem("value5x");
+    var value6x = sessionStorage.getItem("value6x");
+    var value7x = sessionStorage.getItem("value7x");
+    var value8x = sessionStorage.getItem("value8x");
+    var value9x = sessionStorage.getItem("value9x");
+    var value10x = sessionStorage.getItem("value10x");
+
+    document.getElementById("textbox1m").value = value1;
+    document.getElementById("textbox2m").value = value2;
+    document.getElementById("textbox3m").value = value3;
+    document.getElementById("textbox4m").value = value4;
+    document.getElementById("textbox5m").value = value5;
+    document.getElementById("textbox6m").value = value6;
+    document.getElementById("textbox7m").value = value7;
+    document.getElementById("textbox8m").value = value8;
+    document.getElementById("textbox9m").value = value9;
+    document.getElementById("textbox10m").value = value10;
+
+    document.getElementById("text1aa").value = value1a*0.99;
+    document.getElementById("text2aa").value = value2a*0.99;
+    document.getElementById("text3aa").value = value3a*0.99;
+    document.getElementById("text4aa").value = value4a*0.99;
+    document.getElementById("text5aa").value = value5a*0.99;
+    document.getElementById("text6aa").value = value6a*0.99;
+    document.getElementById("text7aa").value = value7a*0.99;
+    document.getElementById("text8aa").value = value8a*0.99;
+    document.getElementById("text9aa").value = value9a*0.99;
+    document.getElementById("text10aa").value = value10a*0.99;
+
+    document.getElementById("text1bb").value = value1b*0.53;
+    document.getElementById("text2bb").value = value2b*0.53;
+    document.getElementById("text3bb").value = value3b*0.53;
+    document.getElementById("text4bb").value = value4b*0.53;
+    document.getElementById("text5bb").value = value5b*0.53;
+    document.getElementById("text6bb").value = value6b*0.53;
+    document.getElementById("text7bb").value = value7b*0.53;
+    document.getElementById("text8bb").value = value8b*0.53;
+    document.getElementById("text9bb").value = value9b*0.53;
+    document.getElementById("text10bb").value = value10b*0.53;
+
+    document.getElementById("text1cc").value = value1c*0.58;
+    document.getElementById("text2cc").value = value2c*0.58;
+    document.getElementById("text3cc").value = value3c*0.58;
+    document.getElementById("text4cc").value = value4c*0.58;
+    document.getElementById("text5cc").value = value5c*0.58;
+    document.getElementById("text6cc").value = value6c*0.58;
+    document.getElementById("text7cc").value = value7c*0.58;
+    document.getElementById("text8cc").value = value8c*0.58;
+    document.getElementById("text9cc").value = value9c*0.58;
+    document.getElementById("text10cc").value = value10c*0.58;
+
+    document.getElementById("text1dd").value = value1d*1.31;
+    document.getElementById("text2dd").value = value2d*1.31;
+    document.getElementById("text3dd").value = value3d*1.31;
+    document.getElementById("text4dd").value = value4d*1.31;
+    document.getElementById("text5dd").value = value5d*1.31;
+    document.getElementById("text6dd").value = value6d*1.31;
+    document.getElementById("text7dd").value = value7d*1.31;
+    document.getElementById("text8dd").value = value8d*1.31;
+    document.getElementById("text9dd").value = value9d*1.31;
+    document.getElementById("text10dd").value = value10d*1.31;
+
+    document.getElementById("text1ee").value = value1e*1.12;
+    document.getElementById("text2ee").value = value2e*1.12;
+    document.getElementById("text3ee").value = value3e*1.12;
+    document.getElementById("text4ee").value = value4e*1.12;
+    document.getElementById("text5ee").value = value5e*1.12;
+    document.getElementById("text6ee").value = value6e*1.12;
+    document.getElementById("text7ee").value = value7e*1.12;
+    document.getElementById("text8ee").value = value8e*1.12;
+    document.getElementById("text9ee").value = value9e*1.12;
+    document.getElementById("text10ee").value = value10e*1.12;
+
+    document.getElementById("text1ff").value = value1f*0.98;
+    document.getElementById("text2ff").value = value2f*0.98;
+    document.getElementById("text3ff").value = value3f*0.98;
+    document.getElementById("text4ff").value = value4f*0.98;
+    document.getElementById("text5ff").value = value5f*0.98;
+    document.getElementById("text6ff").value = value6f*0.98;
+    document.getElementById("text7ff").value = value7f*0.98;
+    document.getElementById("text8ff").value = value8f*0.98;
+    document.getElementById("text9ff").value = value9f*0.98;
+    document.getElementById("text10ff").value = value10f*0.98;
+
+    document.getElementById("text1gg").value = value1g*0.85;
+    document.getElementById("text2gg").value = value2g*0.85;
+    document.getElementById("text3gg").value = value3g*0.85;
+    document.getElementById("text4gg").value = value4g*0.85;
+    document.getElementById("text5gg").value = value5g*0.85;
+    document.getElementById("text6gg").value = value6g*0.85;
+    document.getElementById("text7gg").value = value7g*0.85;
+    document.getElementById("text8gg").value = value8g*0.85;
+    document.getElementById("text9gg").value = value9g*0.85;
+    document.getElementById("text10gg").value = value10g*0.85;
+
+    document.getElementById("text1hh").value = value1h;
+    document.getElementById("text2hh").value = value2h;
+    document.getElementById("text3hh").value = value3h;
+    document.getElementById("text4hh").value = value4h;
+    document.getElementById("text5hh").value = value5h;
+    document.getElementById("text6hh").value = value6h;
+    document.getElementById("text7hh").value = value7h;
+    document.getElementById("text8hh").value = value8h;
+    document.getElementById("text9hh").value = value9h;
+    document.getElementById("text10hh").value = value10h;
+
+    document.getElementById("text1ii").value = value1i*1.38;
+    document.getElementById("text2ii").value = value2i*1.38;
+    document.getElementById("text3ii").value = value3i*1.38;
+    document.getElementById("text4ii").value = value4i*1.38;
+    document.getElementById("text5ii").value = value5i*1.38;
+    document.getElementById("text6ii").value = value6i*1.38;
+    document.getElementById("text7ii").value = value7i*1.38;
+    document.getElementById("text8ii").value = value8i*1.38;
+    document.getElementById("text9ii").value = value9i*1.38;
+    document.getElementById("text10ii").value = value10i*1.38;
+
+    document.getElementById("text1jj").value = value1j*0.48;
+    document.getElementById("text2jj").value = value2j*0.48;
+    document.getElementById("text3jj").value = value3j*0.48;
+    document.getElementById("text4jj").value = value4j*0.48;
+    document.getElementById("text5jj").value = value5j*0.48;
+    document.getElementById("text6jj").value = value6j*0.48;
+    document.getElementById("text7jj").value = value7j*0.48;
+    document.getElementById("text8jj").value = value8j*0.48;
+    document.getElementById("text9jj").value = value9j*0.48;
+    document.getElementById("text10jj").value = value10j*0.48;
+
+    document.getElementById("text1kk").value = value1k*0.61;
+    document.getElementById("text2kk").value = value2k*0.61;
+    document.getElementById("text3kk").value = value3k*0.61;
+    document.getElementById("text4kk").value = value4k*0.61;
+    document.getElementById("text5kk").value = value5k*0.61;
+    document.getElementById("text6kk").value = value6k*0.61;
+    document.getElementById("text7kk").value = value7k*0.61;
+    document.getElementById("text8kk").value = value8k*0.61;
+    document.getElementById("text9kk").value = value9k*0.61;
+    document.getElementById("text10kk").value = value10k*0.61;
+
+    document.getElementById("text1ll").value = value1l*0.55;
+    document.getElementById("text2ll").value = value2l*0.55;
+    document.getElementById("text3ll").value = value3l*0.55;
+    document.getElementById("text4ll").value = value4l*0.55;
+    document.getElementById("text5ll").value = value5l*0.55;
+    document.getElementById("text6ll").value = value6l*0.55;
+    document.getElementById("text7ll").value = value7l*0.55;
+    document.getElementById("text8ll").value = value8l*0.55;
+    document.getElementById("text9ll").value = value9l*0.55;
+    document.getElementById("text10ll").value = value10l*0.55;
+
+    document.getElementById("text1xx").value = value1x;
+    document.getElementById("text2xx").value = value2x;
+    document.getElementById("text3xx").value = value3x;
+    document.getElementById("text4xx").value = value4x;
+    document.getElementById("text5xx").value = value5x;
+    document.getElementById("text6xx").value = value6x;
+    document.getElementById("text7xx").value = value7x;
+    document.getElementById("text8xx").value = value8x;
+    document.getElementById("text9xx").value = value9x;
+    document.getElementById("text10xx").value = value10x;
+
+
+
+    // 변수에 저장된 값을 사용합니다.
+    
+  }
+
+
+ 
+    </script>
+    </body>
+
+</html>    

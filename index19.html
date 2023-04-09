@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>최종 순위 발표</title>
+        <div>
+            <img src="에이블 로고.png" alt="에이블">
+        </div>
+        <style>
+            body {
+  background-image: url("2015.png"); /* 이미지 파일 경로 */
+  background-size: cover; /* 배경 이미지 크기 설정 */
+}
+        img {
+    float: left;
+  }
+  h1 {
+            color : white;
+            text-align: center;
+            font-size: 5em;
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* 테두리 스타일 */
+            padding: 10px; /* 글자와 테두리 간격 */
+          }
+          .center {
+		  margin: 0 auto;
+		  text-align: center;
+		}
+
+        input[type="text"] {
+    text-align: center;
+   
+  }   
+  label {
+			display: block; /* 라벨 엘리먼트가 한 줄을 차지하도록 설정 */
+			margin-bottom: 5px; /* 라벨과 텍스트박스 사이의 간격 조정 */
+			font-size: 20px; /* 라벨의 폰트 크기 */
+			font-weight: bold; /* 라벨의 폰트 두께 */
+            text-align : center; 
+            display: inline-block; 
+            width: 150px; color : white; 
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+		}
+		input[type="text"] {
+			width: 200px; /* 텍스트박스의 가로 크기 */
+			height: 50px; /* 텍스트박스의 세로 크기 */
+			padding: 5px; /* 텍스트박스의 안쪽 여백 */
+			font-size: 20px; /* 텍스트박스의 폰트 크기 */
+			border: 1px solid #ccc; /* 텍스트박스의 테두리 스타일 */
+			border-radius: 4px; /* 텍스트박스의 테두리 모서리 둥글기 */
+			box-sizing: border-box; /* 텍스트박스의 너비와 높이에 안쪽 여백과 테두리 두께를 포함시키기 */
+            
+		}    
+
+        
+
+        </style>
+    </head>
+
+    <body>
+        <h1>최종 순위 발표</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div style="display: flex; justify-content: center; text-align: center; margin-left: 170px;">
+        <button onclick="useValues()" style="  width: 1000px; height: 50px; margin-right: 20px; background-color: rgb(0, 0, 0); color: white; border: none; width: 150px; height: 50px; font-size : 20px;">결과 불러오기</button>
+        <button onclick="sortTextboxValues()"style="  width: 1000px; height: 50px; margin-right: 20px; background-color: rgb(0, 0, 0); color: white; border: none; width: 150px; height: 50px; font-size : 20px;">정렬하기</button>
+    </div>
+        <br>
+        <br>   
+         <div class="center">
+            
+            <label for="text1" id="label1">법인명</label>
+            <input type="text" id="text1" name="text1">
+            <br>
+            <label for="text2"id="label2">법인명</label>
+            <input type="text" id="text2" name="text2">
+            <br>
+            <label for="text3"id="label3">법인명</label>
+            <input type="text" id="text3" name="text3">
+            <br>
+            <label for="text4"id="label4">법인명</label>
+            <input type="text" id="text4" name="text4">
+            <br>
+            <label for="text5"id="label5">법인명</label>
+            <input type="text" id="text5" name="text5">
+            <br>
+            <label for="text6"id="label6">법인명</label>
+            <input type="text" id="text6" name="text6">
+            <br>
+            <label for="text7"id="label7">법인명</label>
+            <input type="text" id="text7" name="text7">
+            <br>
+            <label for="text8"id="label8">법인명</label>
+            <input type="text" id="text8" name="text8">
+            <br>
+            <label for="text9"id="label9">법인명</label>
+            <input type="text" id="text9" name="text9">
+            <br>
+            <label for="text10"id="label10">법인명</label>
+            <input type="text" id="text10" name="text10">
+            </div>
+
+          
+
+            <script>
+
+window.onload = function() {
+  const maxLength = 0; // 최대 소수점 자릿수
+  const inputs = document.querySelectorAll("input[type='text']");
+  inputs.forEach(input => {
+    input.addEventListener("input", function() {
+      const parts = this.value.split(".");
+      if (parts.length === 2) {
+        // 소수점이 존재하는 경우
+        const integerPart = parts[0];
+        let decimalPart = parts[1];
+        if (decimalPart.length > maxLength) {
+          decimalPart = decimalPart.substring(0, maxLength);
+        }
+        this.value = `${integerPart}.${decimalPart}`;
+      }
+    });
+  });
+};
+
+function truncateInput(input) {
+  const maxLength = 2; // 최대 소수점 자릿수
+  input.value = truncateDecimal(input.value, maxLength);
+}
+
+                
+                
+            function useValues() {
+                // 저장된 값을 가져와 변수에 저장합니다.
+                var value1a = sessionStorage.getItem("value1a");
+                var value1b = sessionStorage.getItem("value1b");
+                var value1c = sessionStorage.getItem("value1c");
+                var value1d = sessionStorage.getItem("value1d");
+                var value1e = sessionStorage.getItem("value1e");
+                var value1f = sessionStorage.getItem("value1f");
+                var value1g = sessionStorage.getItem("value1g");
+                var value1h = sessionStorage.getItem("value1h");
+                var value1i = sessionStorage.getItem("value1i");
+                var value1j = sessionStorage.getItem("value1j");
+                var value1k = sessionStorage.getItem("value1k");
+                var value1l = sessionStorage.getItem("value1l");
+                var value1x = sessionStorage.getItem("value1x");
+
+                var value2a = sessionStorage.getItem("value2a");
+                var value2b = sessionStorage.getItem("value2b");
+                var value2c = sessionStorage.getItem("value2c");
+                var value2d = sessionStorage.getItem("value2d");
+                var value2e = sessionStorage.getItem("value2e");
+                var value2f = sessionStorage.getItem("value2f");
+                var value2g = sessionStorage.getItem("value2g");
+                var value2h = sessionStorage.getItem("value2h");
+                var value2i = sessionStorage.getItem("value2i");
+                var value2j = sessionStorage.getItem("value2j");
+                var value2k = sessionStorage.getItem("value2k");
+                var value2l = sessionStorage.getItem("value2l");
+                var value2x = sessionStorage.getItem("value2x");
+
+                var value3a = sessionStorage.getItem("value3a");
+                var value3b = sessionStorage.getItem("value3b");
+                var value3c = sessionStorage.getItem("value3c");
+                var value3d = sessionStorage.getItem("value3d");
+                var value3e = sessionStorage.getItem("value3e");
+                var value3f = sessionStorage.getItem("value3f");
+                var value3g = sessionStorage.getItem("value3g");
+                var value3h = sessionStorage.getItem("value3h");
+                var value3i = sessionStorage.getItem("value3i");
+                var value3j = sessionStorage.getItem("value3j");
+                var value3k = sessionStorage.getItem("value3k");
+                var value3l = sessionStorage.getItem("value3l");
+                var value3x = sessionStorage.getItem("value3x");
+                
+
+                var value4a = sessionStorage.getItem("value4a");
+                var value4b = sessionStorage.getItem("value4b");
+                var value4c = sessionStorage.getItem("value4c");
+                var value4d = sessionStorage.getItem("value4d");
+                var value4e = sessionStorage.getItem("value4e");
+                var value4f = sessionStorage.getItem("value4f");
+                var value4g = sessionStorage.getItem("value4g");
+                var value4h = sessionStorage.getItem("value4h");
+                var value4i = sessionStorage.getItem("value4i");
+                var value4j = sessionStorage.getItem("value4j");
+                var value4k = sessionStorage.getItem("value4k");
+                var value4l = sessionStorage.getItem("value4l");
+                var value4x = sessionStorage.getItem("value4x");
+
+                var value5a = sessionStorage.getItem("value5a");
+                var value5b = sessionStorage.getItem("value5b");
+                var value5c = sessionStorage.getItem("value5c");
+                var value5d = sessionStorage.getItem("value5d");
+                var value5e = sessionStorage.getItem("value5e");
+                var value5f = sessionStorage.getItem("value5f");
+                var value5g = sessionStorage.getItem("value5g");
+                var value5h = sessionStorage.getItem("value5h");
+                var value5i = sessionStorage.getItem("value5i");
+                var value5j = sessionStorage.getItem("value5j");
+                var value5k = sessionStorage.getItem("value5k");
+                var value5l = sessionStorage.getItem("value5l");
+                var value5x = sessionStorage.getItem("value5x");
+
+                var value6a = sessionStorage.getItem("value6a");
+                var value6b = sessionStorage.getItem("value6b");
+                var value6c = sessionStorage.getItem("value6c");
+                var value6d = sessionStorage.getItem("value6d");
+                var value6e = sessionStorage.getItem("value6e");
+                var value6f = sessionStorage.getItem("value6f");
+                var value6g = sessionStorage.getItem("value6g");
+                var value6h = sessionStorage.getItem("value6h");
+                var value6i = sessionStorage.getItem("value6i");
+                var value6j = sessionStorage.getItem("value6j");
+                var value6k = sessionStorage.getItem("value6k");
+                var value6l = sessionStorage.getItem("value6l");
+                var value6x = sessionStorage.getItem("value6x");
+
+
+                var value7a = sessionStorage.getItem("value7a");
+                var value7b = sessionStorage.getItem("value7b");
+                var value7c = sessionStorage.getItem("value7c");
+                var value7d = sessionStorage.getItem("value7d");
+                var value7e = sessionStorage.getItem("value7e");
+                var value7f = sessionStorage.getItem("value7f");
+                var value7g = sessionStorage.getItem("value7g");
+                var value7h = sessionStorage.getItem("value7h");
+                var value7i = sessionStorage.getItem("value7i");
+                var value7j = sessionStorage.getItem("value7j");
+                var value7k = sessionStorage.getItem("value7k");
+                var value7l = sessionStorage.getItem("value7l");
+                var value7x = sessionStorage.getItem("value7x");
+
+                var value8a = sessionStorage.getItem("value8a");
+                var value8b = sessionStorage.getItem("value8b");
+                var value8c = sessionStorage.getItem("value8c");
+                var value8d = sessionStorage.getItem("value8d");
+                var value8e = sessionStorage.getItem("value8e");
+                var value8f = sessionStorage.getItem("value8f");
+                var value8g = sessionStorage.getItem("value8g");
+                var value8h = sessionStorage.getItem("value8h");
+                var value8i = sessionStorage.getItem("value8i");
+                var value8j = sessionStorage.getItem("value8j");
+                var value8k = sessionStorage.getItem("value8k");
+                var value8l = sessionStorage.getItem("value8l");
+                var value8x = sessionStorage.getItem("value8x");
+
+                var value9a = sessionStorage.getItem("value9a");
+                var value9b = sessionStorage.getItem("value9b");
+                var value9c = sessionStorage.getItem("value9c");
+                var value9d = sessionStorage.getItem("value9d");
+                var value9e = sessionStorage.getItem("value9e");
+                var value9f = sessionStorage.getItem("value9f");
+                var value9g = sessionStorage.getItem("value9g");
+                var value9h = sessionStorage.getItem("value9h");
+                var value9i = sessionStorage.getItem("value9i");
+                var value9j = sessionStorage.getItem("value9j");
+                var value9k = sessionStorage.getItem("value9k");
+                var value9l = sessionStorage.getItem("value9l");
+                var value9x = sessionStorage.getItem("value9x");
+
+                var value10a = sessionStorage.getItem("value10a");
+                var value10b = sessionStorage.getItem("value10b");
+                var value10c = sessionStorage.getItem("value10c");
+                var value10d = sessionStorage.getItem("value10d");
+                var value10e = sessionStorage.getItem("value10e");
+                var value10f = sessionStorage.getItem("value10f");
+                var value10g = sessionStorage.getItem("value10g");
+                var value10h = sessionStorage.getItem("value10h");
+                var value10i = sessionStorage.getItem("value10i");
+                var value10j = sessionStorage.getItem("value10j");
+                var value10k = sessionStorage.getItem("value10k");
+                var value10l = sessionStorage.getItem("value10l");
+                var value10x = sessionStorage.getItem("value10x");
+                
+            
+                var value1 = sessionStorage.getItem("value1");
+                var value2 = sessionStorage.getItem("value2");
+                var value3 = sessionStorage.getItem("value3");
+                var value4 = sessionStorage.getItem("value4");
+                var value5 = sessionStorage.getItem("value5");
+                var value6 = sessionStorage.getItem("value6");
+                var value7 = sessionStorage.getItem("value7");
+                var value8 = sessionStorage.getItem("value8");
+                var value9 = sessionStorage.getItem("value9");
+                var value10 = sessionStorage.getItem("value10");
+                
+                document.getElementById("label1").innerHTML = value1;
+                document.getElementById("label2").innerHTML = value2;
+                document.getElementById("label3").innerHTML = value3;
+                document.getElementById("label4").innerHTML = value4;
+                document.getElementById("label5").innerHTML = value5;
+                document.getElementById("label6").innerHTML = value6;
+                document.getElementById("label7").innerHTML = value7;
+                document.getElementById("label8").innerHTML = value8;
+                document.getElementById("label9").innerHTML = value9;
+                document.getElementById("label10").innerHTML = value10;
+               
+            
+                var result = Number(value1a) + Number(value1b) + Number(value1c) + Number(value1d) + Number(value1e) + Number(value1f) + Number(value1g) + Number(value1h) + Number(value1i) + Number(value1j) + Number(value1k) + Number(value1l) + Number(value1x);
+                document.getElementById("text1").value = result;
+                document.getElementById("text2").value = Number(value2a) + Number(value2b) + Number(value2c) + Number(value2d) + Number(value2e) + Number(value2f) + Number(value2g) + Number(value2h) + Number(value2i) + Number(value2j) + Number(value2k) + Number(value2l) + Number(value2x);
+                document.getElementById("text3").value = Number(value3a) + Number(value3b) + Number(value3c) + Number(value3d) + Number(value3e) + Number(value3f) + Number(value3g) + Number(value3h) + Number(value3i) + Number(value3j) + Number(value3k) + Number(value3l) + Number(value3x);
+
+                document.getElementById("text4").value = Number(value4a) + Number(value4b) + Number(value4c) + Number(value4d) + Number(value4e) + Number(value4f) + Number(value4g) + Number(value4h) + Number(value4i) + Number(value4j) + Number(value4k) + Number(value4l) + Number(value4x);
+
+                document.getElementById("text5").value = Number(value5a) + Number(value5b) + Number(value5c) + Number(value5d) + Number(value5e) + Number(value5f) + Number(value5g) + Number(value5h) + Number(value5i) + Number(value5j) + Number(value5k) + Number(value5l) + Number(value5x);
+
+                document.getElementById("text6").value = Number(value6a) + Number(value6b) + Number(value6c) + Number(value6d) + Number(value6e) + Number(value6f) + Number(value6g) + Number(value6h) + Number(value6i) + Number(value6j) + Number(value6k) + Number(value6l) + Number(value6x);
+                document.getElementById("text7").value = Number(value7a) + Number(value7b) + Number(value7c) + Number(value7d) + Number(value7e) + Number(value7f) + Number(value7g) + Number(value7h) + Number(value7i) + Number(value7j) + Number(value7k) + Number(value7l) + Number(value7x);
+
+document.getElementById("text8").value = Number(value8a) + Number(value8b) + Number(value8c) + Number(value8d) + Number(value8e) + Number(value8f) + Number(value8g) + Number(value8h) + Number(value8i) + Number(value8j) + Number(value8k) + Number(value8l) + Number(value8x);
+
+document.getElementById("text9").value = Number(value9a) + Number(value9b) + Number(value9c) + Number(value9d) + Number(value9e) + Number(value9f) + Number(value9g) + Number(value9h) + Number(value9i) + Number(value9j) + Number(value9k) + Number(value9l) + Number(value9x);
+
+document.getElementById("text10").value = Number(value10a) + Number(value10b) + Number(value10c) + Number(value10d) + Number(value10e) + Number(value10f) + Number(value10g) + Number(value10h) + Number(value10i) + Number(value10j) + Number(value10k) + Number(value10l) + Number(value10x);
+
+            
+                // 변수에 저장된 값을 사용합니다.
+                alert("불러오기 완료");
+                }
+                function sortTextboxValues() {
+    // 배열 생성 및 초기화
+    var values = [];
+    for (var i = 1; i <= 10; i++) {
+      var textbox = document.getElementById('text' + i);
+      var label = document.getElementById('label' + i);
+      values.push({ value: textbox.value, label: label.innerHTML });
+    }
+
+    // 값에 따라 내림차순 정렬
+    values.sort(function(a, b) {
+      return b.value.localeCompare(a.value);
+    });
+
+    // 정렬된 값으로 텍스트박스 및 레이블 업데이트
+    for (var i = 1; i <= 10; i++) {
+      var textbox = document.getElementById('text' + i);
+      var label = document.getElementById('label' + i);
+      textbox.value = values[i - 1].value;
+      label.innerHTML = values[i - 1].label;
+
+      // 첫번째 라벨 텍스트의 색상을 빨강으로 변경
+      if (i == 1) {
+        label.style.color = 'red';
+        label.style.fontSize = '40px';
+      } else {
+        label.style.color = 'white';
+      }
+    }
+}
+
+              </script>
+    </body>
+</html>
