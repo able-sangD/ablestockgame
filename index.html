@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>에이블 주식 게임</title>
+    <div>
+  <img src="에이블 로고.png" alt="에이블">
+</div>
+
+     <style>
+        body {
+  background-image: url("배경1.png"); /* 이미지 파일 경로 */
+  background-size: cover; /* 배경 이미지 크기 설정 */
+}
+        img {
+    float: left;
+  }
+      h1 {
+        
+        font-family: 'Montserrat', sans-serif;
+        color : white;
+        text-align: center;
+        font-size: 5em;
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* 테두리 스타일 */
+        padding: 10px; /* 글자와 테두리 간격 */
+      }
+      p {
+        color : white;
+        text-align : left;
+        font-size: 2em;
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* 테두리 스타일 */
+        padding: 1px;
+        letter-spacing: 4px;  /*자간*/
+        line-height: 1.5;  /*행간*/
+        
+        
+    }
+    .next-page-btn {
+  background-color: #000000; /* 배경색 */
+  color: #fff; /* 글자색 */
+  border: none; /* 테두리 없애기 */
+  border-radius: 5px; /* 둥근 테두리 만들기 */
+  padding: 10px 20px; /* 버튼 내부 여백 */
+  font-size: 30px; /* 폰트 크기 */
+  cursor: pointer; /* 마우스 포인터 모양 변경 */
+  transition: all 0.3s ease; /* 호버 효과를 위한 애니메이션 속성 */
+  text-decoration: none;
+}
+
+.next-page-btn:hover {
+  background-color: #0069d9; /* 호버시 배경색 변경 */
+  color: #fff; /* 호버시 글자색 변경 */
+} 
+.button-container {
+      text-align: right;
+      margin-top: 20px;
+    }
+    input[type="text"] {
+    text-align: center;
+    font-size: 30px;
+  }   
+    </style>
+</head>
+<body>
+    
+    <div>
+    
+    <h1>에이블 주식 게임</h1>
+    <p > 
+      <br> 
+                <br>
+                <br>  
+                • 지금부터 우리는 2005년으로 이동하여 투자를 시작합니다.
+    <br>• 2005년 -> 2009년     ||     2009년 -> 2010년    ||    2010년 -> 2015년
+    <br>• 총 세 차례 이동을 하게되며 시작 자본금은 [1억2천만원]입니다.
+    <br>• 금액은 만원 단위로 12,000으로 표기합니다.
+    <br>• A~L 기업까지 잘 검토 후 투자를 해주세요.  
+    
+  </P>
+  <div style="color: red; text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; font-size: 2em;">
+    • 4인 1조 팀을 만들고 여러분의 투자 법인명을 정해주세요.  
+    <br>
+    <br>
+  </div>
+  <input type="text" id="textbox1" placeholder="Team 1">
+  <input type="text" id="textbox2" placeholder="Team 2">
+  <input type="text" id="textbox3" placeholder="Team 3">
+  <input type="text" id="textbox4" placeholder="Team 4">
+  <input type="text" id="textbox5" placeholder="Team 5">
+  <input type="text" id="textbox6" placeholder="Team 6">
+  <input type="text" id="textbox7" placeholder="Team 7">
+  <input type="text" id="textbox8" placeholder="Team 8">
+  <input type="text" id="textbox9" placeholder="Team 9">
+  <input type="text" id="textbox10" placeholder="Team 10">
+  <button onclick="saveValues()" style="background-color: rgb(0, 0, 0); color: white; border: none; width: 150px; height: 50px;">법인명 저장</button>
+  
+
+  <div class="button-container">
+    <a href="index2.html" class="next-page-btn">START</a>
+  </div>
+
+  <script>
+    function saveValues() {
+      // 각 텍스트 박스의 값을 변수에 저장합니다.
+      var value1 = document.getElementById("textbox1").value;
+      var value2 = document.getElementById("textbox2").value;
+      var value3 = document.getElementById("textbox3").value;
+      var value4 = document.getElementById("textbox4").value;
+      var value5 = document.getElementById("textbox5").value;
+      var value6 = document.getElementById("textbox6").value;
+      var value7 = document.getElementById("textbox7").value;
+      var value8 = document.getElementById("textbox8").value;
+      var value9 = document.getElementById("textbox9").value;
+      var value10 = document.getElementById("textbox10").value;
+  
+      // 변수에 저장된 값을 다른 페이지에서 사용할 수 있도록 저장합니다.
+      sessionStorage.setItem("value1", value1);
+      sessionStorage.setItem("value2", value2);
+      sessionStorage.setItem("value3", value3);
+      sessionStorage.setItem("value4", value4);
+      sessionStorage.setItem("value5", value5);
+      sessionStorage.setItem("value6", value6);
+      sessionStorage.setItem("value7", value7);
+      sessionStorage.setItem("value8", value8);
+      sessionStorage.setItem("value9", value9);
+      sessionStorage.setItem("value10", value10);
+  
+      alert("법인명 저장완료");
+    }
+  </script>
+</body>
+</html>
